@@ -6,7 +6,7 @@ using System;
 public static class Loader
 {
     private class LoadingMonoBehavior : MonoBehaviour { }
-    public enum Scenes {
+    public enum Scene {
         IntroScene,
         Loading,
         MainMenu,
@@ -21,7 +21,7 @@ public static class Loader
             loadingGameObject.AddComponent<LoadingMonoBehavior>().StartCoroutine(LoadScenesAsync(scene));
         };
         // load the loading scene each time scene changes
-        SceneManager.LoadScene(Scenes.Loading.ToString());
+        SceneManager.LoadScene(Scene.Loading.ToString());
     }
     private static IEnumerator LoadScenesAsync(Scene scene)
     {

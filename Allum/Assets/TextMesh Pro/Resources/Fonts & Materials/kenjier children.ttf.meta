@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 677f3656c54e88c488e7a883477b8b13
+guid: ceddd01a5d8d76748ac65350c8bba013
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - kenjier children
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 677f3656c54e88c488e7a883477b8b13, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
