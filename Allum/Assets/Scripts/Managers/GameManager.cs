@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        Cursor.visible = false;
     }
     public void UpdateGameState(GameState newState)
     {
