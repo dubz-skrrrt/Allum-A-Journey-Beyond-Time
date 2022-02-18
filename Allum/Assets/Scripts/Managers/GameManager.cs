@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(defaultSelection);
         }
+        if (MenuController.isReturn == true)
+        {
+            EventSystem.current.SetSelectedGameObject(defaultSelection);
+            MenuController.isReturn = false;
+        }
     }
 
     public void UpdateGameState(GameState newState)
