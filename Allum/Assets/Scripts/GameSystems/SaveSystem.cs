@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 public static class SaveSystem 
 {
-    public static void SaveGameState()
+    const string PLAYER_SUB = "/SaveFiles";
+    public static void SaveGameState(Player player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/SaveFiles";
+        string path = Application.persistentDataPath + PLAYER_SUB;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData();
+        PlayerData data = new PlayerData(player);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -21,7 +23,7 @@ public static class SaveSystem
 
     public static PlayerData LoadGameState()
     {
-        string path = Application.persistentDataPath + "/SaveFiles";
+        string path = Application.persistentDataPath + PLAYER_SUB;
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

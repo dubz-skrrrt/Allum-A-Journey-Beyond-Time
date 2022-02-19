@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject MenuPanel;
@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             OnClickEscape();
         }
@@ -35,4 +35,10 @@ public class MenuController : MonoBehaviour
         SlotSelectPanel.SetActive(false);
         isReturn = false;
     }
+
+    public void SaveNewGame()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
 }

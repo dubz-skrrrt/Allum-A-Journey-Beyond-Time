@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

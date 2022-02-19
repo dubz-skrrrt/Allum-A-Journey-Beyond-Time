@@ -9,11 +9,12 @@ public class PlayerData
    public float[] position;
 
 
-   public PlayerData ()
+   public PlayerData (Player player)
    {
-       position = new float[3];
-    //    position[0]
-    //    position[1]
-    //    position[2]
+      Vector3 playerPos = player.transform.position;
+      position = new float[]
+      {
+         playerPos.x, playerPos.y, playerPos.z
+      };
    }
 }
