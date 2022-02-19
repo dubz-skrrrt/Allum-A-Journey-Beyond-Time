@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject MenuPanel;
     [SerializeField] GameObject SlotSelectPanel;
     [SerializeField] MenuButtonController menuButtonController;
+    public static bool isStartPressed;
     public static bool isReturn;
 
     void Update()
@@ -14,10 +15,6 @@ public class MenuController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnClickEscape();
-        }
-        if (menuButtonController.index == 0 && Input.GetAxis("Submit") == 1)
-        {
-            SelectPanelEnabled();
         }
     }
 

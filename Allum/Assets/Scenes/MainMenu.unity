@@ -713,6 +713,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 260099140}
     m_Modifications:
     - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
+    - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
       objectReference: {fileID: 1279670402}
@@ -812,6 +816,10 @@ PrefabInstance:
       propertyPath: thisIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
     - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
@@ -1138,6 +1146,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 260099140}
     m_Modifications:
     - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
+    - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
       objectReference: {fileID: 1279670402}
@@ -1237,6 +1249,10 @@ PrefabInstance:
       propertyPath: thisIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
     - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
@@ -9675,6 +9691,7 @@ GameObject:
   - component: {fileID: 1279670397}
   - component: {fileID: 1279670401}
   - component: {fileID: 1279670402}
+  - component: {fileID: 1279670403}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -9794,6 +9811,22 @@ MonoBehaviour:
   index: 0
   keyDown: 0
   maxIndex: 2
+--- !u!111 &1279670403
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279670396}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9e7352d9d666ec544b5e8bf65e245bf4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9e7352d9d666ec544b5e8bf65e245bf4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1316346791
 GameObject:
   m_ObjectHideFlags: 0
@@ -15671,7 +15704,7 @@ Transform:
   m_GameObject: {fileID: 1540877374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.92604166, y: 2.3697917, z: 22.50002}
-  m_LocalScale: {x: 1.1602501, y: 1.1602501, z: 1.1602501}
+  m_LocalScale: {x: 1.1602501, y: 1.16025, z: 1.16025}
   m_Children: []
   m_Father: {fileID: 893247235}
   m_RootOrder: 0
@@ -17322,9 +17355,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 260099140}
     m_Modifications:
     - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
+    - target: {fileID: 3138342228110849833, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
       objectReference: {fileID: 1279670402}
+    - target: {fileID: 7362326148805607136, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7362326148805607136, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
@@ -17417,6 +17458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 1279670401}
     - target: {fileID: 7362326148805607164, guid: a8123cc28f7022049adb4118bf6cdc99, type: 3}
       propertyPath: menuButtonController
       value: 
