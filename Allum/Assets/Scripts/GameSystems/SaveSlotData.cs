@@ -45,7 +45,8 @@ public class SaveSlotData : MonoBehaviour
     }
     public void SlotSavedIn()
     {
-        GameObject slot = EventSystem.current.currentSelectedGameObject;
+        GameObject slot = this.gameObject;
+        Debug.Log(slot.name);   
         SlotName = slot.name;
     }
     public void SlotDataRead()

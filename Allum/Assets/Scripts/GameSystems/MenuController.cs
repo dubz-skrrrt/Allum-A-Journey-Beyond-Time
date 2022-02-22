@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject MenuPanel;
     [SerializeField] GameObject SlotSelectPanel;
     [SerializeField] MenuButtonController menuButtonController;
+    public static bool isStartPanel;
     public static bool isStartPressed;
     public static bool isReturn;
 
+    private void Awake()
+    {
+        isStartPanel = true;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.B))
         {
-            OnClickEscape();
+            this.gameObject.GetComponent<Animation>().Play("ReturnAnim");
         }
     }
 
@@ -27,6 +32,7 @@ public class MenuController : MonoBehaviour
     {
         MenuPanel.SetActive(false);
         SlotSelectPanel.SetActive(true);
+        isStartPanel = false;
     }
 
     public void MainMenuEnabled()
@@ -34,11 +40,7 @@ public class MenuController : MonoBehaviour
         MenuPanel.SetActive(true);
         SlotSelectPanel.SetActive(false);
         isReturn = false;
-    }
-
-    public void SaveNewGame()
-    {
-        SceneManager.LoadScene("GameScene");
+        isStartPanel = true;
     }
 
 }

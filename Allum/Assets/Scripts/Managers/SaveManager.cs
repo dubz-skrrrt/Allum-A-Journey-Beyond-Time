@@ -28,6 +28,11 @@ public class SaveManager : MonoBehaviour
         SavePlayer();
     }
 
+    private void Update()
+    {
+        
+    }
+
 
     public void SavePlayer()
     {
@@ -37,7 +42,6 @@ public class SaveManager : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
-        Debug.Log(data.SceneName);
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         Vector3 position = player.transform.position;

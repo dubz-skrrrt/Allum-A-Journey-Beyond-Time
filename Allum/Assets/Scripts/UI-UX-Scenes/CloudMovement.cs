@@ -5,7 +5,7 @@ using UnityEngine;
 public class CloudMovement : MonoBehaviour
 {
     private const float XCloudPosDestroy = 15f;
-    private const float cloudMoveSpeed = 0.2f;
+    private const float cloudMoveSpeed = 0.75f;
     public List<Transform> cloudList;
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class CloudMovement : MonoBehaviour
         foreach (Transform clouds in cloudList)
         {
             clouds.position += new Vector3(1, 0, 0) * cloudMoveSpeed * Time.deltaTime;
-            float RightMostXPos = -16f;
+            float RightMostXPos = -19f;
             
             if (clouds.position.x > XCloudPosDestroy)
             {

@@ -11,23 +11,49 @@ public class MenuButton : MonoBehaviour
     public int thisIndex;
     private void Update()
     {
-        if (menuButtonController.index == thisIndex)
+        if (MenuController.isStartPanel)
         {
-            animator.SetBool("selected", true);
-            if (Input.GetAxis("Submit") == 1)
+            if (menuButtonController.index == thisIndex)
             {
-                animator.SetBool("pressed", true);
+                animator.SetBool("selected", true);
+                if (Input.GetAxis("Submit") == 1)
+                {
+                    Debug.Log("pressed1");
+                    animator.SetBool("pressed", true);
+                }
+                else if (animator.GetBool ("pressed"))
+                {
+                    animator.SetBool("pressed", false);
+                    //animatorFunctions.disableOnce = true;
+                }
             }
-            else if (animator.GetBool ("pressed"))
+            else
             {
-                animator.SetBool("pressed", false);
-                //animatorFunctions.disableOnce = true;
+                animator.SetBool ("selected", false);
             }
         }
         else
         {
-            animator.SetBool ("selected", false);
+            if (menuButtonController.index == thisIndex)
+            {
+                animator.SetBool("selected", true);
+                if (Input.GetAxis("Submit") == 1)
+                {
+                    Debug.Log("pressed");
+                    animator.SetBool("pressed", true);
+                }
+                else if (animator.GetBool ("pressed"))
+                {
+                    animator.SetBool("pressed", false);
+                    //animatorFunctions.disableOnce = true;
+                }
+            }
+            else
+            {
+                animator.SetBool ("selected", false);
+            }
         }
+        
             
     }
 

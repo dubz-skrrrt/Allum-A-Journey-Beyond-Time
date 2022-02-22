@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using System.IO;
 public class AnimatorFunctions : MonoBehaviour
 {
     [SerializeField] MenuButtonController menuButtonController;
@@ -10,9 +11,26 @@ public class AnimatorFunctions : MonoBehaviour
 
     public void EnableSavePanel()
     {
-        if (menuButtonController.index == 0)
+        if (menuButtonController.index == 0 && MenuController.isStartPanel)
         {
             menuController.GetComponent<Animation>().Play("MenuTransition");
         }
+        
+    }
+
+    public void startGame()
+    {
+        if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))
+        {
+            Debug.Log("HasFile");
+            PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
+            SceneManager.LoadScene(data.SceneIndex);
+        }
+        else
+        {
+            Debug.Log("NoFile");
+            SceneManager.LoadScene("GameScene");
+        }
+        
     }
 }

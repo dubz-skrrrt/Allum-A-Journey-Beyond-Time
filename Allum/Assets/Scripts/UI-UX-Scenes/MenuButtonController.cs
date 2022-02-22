@@ -10,28 +10,58 @@ public class MenuButtonController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxis("Vertical") != 0)
+        if (MenuController.isStartPanel)
         {
-            if (!keyDown)
+            if (Input.GetAxis("Vertical") != 0)
             {
-                if (Input.GetAxis("Vertical") < 0)
+                if (!keyDown)
                 {
-                    if (index < maxIndex)
-                        index++;
-                    else
-                        index = 0;
+                    if (Input.GetAxis("Vertical") < 0)
+                    {
+                        if (index < maxIndex)
+                            index++;
+                        else
+                            index = 0;
+                    }
+                    else if (Input.GetAxis("Vertical") > 0)
+                    {
+                        if (index > 0)
+                            index--;
+                        else   
+                            index = maxIndex;
+                    }
+                    keyDown = true;
                 }
-                else if (Input.GetAxis("Vertical") > 0)
-                {
-                    if (index > 0)
-                        index--;
-                    else   
-                        index = maxIndex;
-                }
-                keyDown = true;
             }
+            else
+                keyDown = false;
         }
         else
-            keyDown = false;
+        {
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                if (!keyDown)
+                {
+                    if (Input.GetAxis("Horizontal") > 0)
+                    {
+                        if (index < maxIndex)
+                            index++;
+                        else
+                            index = 0;
+                    }
+                    else if (Input.GetAxis("Horizontal") < 0)
+                    {
+                        if (index > 0)
+                            index--;
+                        else   
+                            index = maxIndex;
+                    }
+                    keyDown = true;
+                }
+            }
+            else
+                keyDown = false;
+        }
+        
     }
 }
