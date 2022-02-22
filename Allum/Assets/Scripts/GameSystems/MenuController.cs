@@ -22,11 +22,16 @@ public class MenuController : MonoBehaviour
             this.gameObject.GetComponent<Animation>().Play("ReturnAnim");
         }
     }
-
+    
     public void OnClickEscape()
     {
         isReturn = true;
         MainMenuEnabled();
+    }
+    public void returnMenuAnim()
+    {
+        this.gameObject.GetComponent<Animation>().Play("MenuTransition2");
+        
     }
     public void SelectPanelEnabled()
     {
@@ -37,6 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void MainMenuEnabled()
     {
+        menuButtonController.index = 0;
         MenuPanel.SetActive(true);
         SlotSelectPanel.SetActive(false);
         isReturn = false;
