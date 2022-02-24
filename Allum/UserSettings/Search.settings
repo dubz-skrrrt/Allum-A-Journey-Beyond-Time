@@ -8,6 +8,15 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.B064B029" = "2d environment"
+	"asset.B064B029" = "False"
+	"menu.B064B029" = "False"
+	"scene.B064B029" = "False"
+	"settings.B064B029" = "False"
+	"m_ShownPanels.B064B029" = "3"
+	"m_SideBarSplitter.B064B029" = "180"
+	"m_DetailsPanelSplitter.B064B029" = "700"
+	"currentGroup.B064B029" = "all"
 }
 providers = {
 	asset = {
