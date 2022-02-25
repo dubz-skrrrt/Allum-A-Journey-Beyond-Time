@@ -9,15 +9,23 @@ public class SaveManager : MonoBehaviour
     public Player player;
     public int sceneNum;
     public string sceneName;
+    public bool sceneSwitchSave;
     private void Awake()
     {
-        instance = this;
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
         DontDestroyOnLoad(this.gameObject);
-        sceneNum = SceneManager.GetActiveScene().buildIndex;
-        sceneName = SceneManager.GetActiveScene().name;
         if (!File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))
         {
             Debug.Log(SaveSlotData.SlotName);
+            SceneSwitchData();
             SavePlayer();
         }
         
@@ -28,12 +36,12 @@ public class SaveManager : MonoBehaviour
         SavePlayer();
     }
 
-    private void Update()
+    public void SceneSwitchData()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        sceneNum = SceneManager.GetActiveScene().buildIndex;
+        sceneName = SceneManager.GetActiveScene().name;
     }
-
-
     public void SavePlayer()
     {
         SaveSystem.SaveGameState(player, SaveSlotData.SlotName);
@@ -44,6 +52,12 @@ public class SaveManager : MonoBehaviour
         PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
+        player.isFacingRight = data.isfacing;
+        Vector3 scale = player.transform.localScale;
+        scale.x = data.facingRight[0];
+        scale.y = data.facingRight[1];
+        scale.z = data.facingRight[2];
+        player.transform.localScale = scale;
         Vector3 position = player.transform.position;
         position.x = data.position[0];
         position.y = data.position[1];

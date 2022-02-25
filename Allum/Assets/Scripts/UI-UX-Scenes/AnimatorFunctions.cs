@@ -7,6 +7,7 @@ public class AnimatorFunctions : MonoBehaviour
 {
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] MenuController menuController;
+    [SerializeField] LoadSceneManager loadSceneManager;
     public bool disableOnce; 
 
     public void EnableSavePanel()
@@ -24,12 +25,13 @@ public class AnimatorFunctions : MonoBehaviour
         {
             Debug.Log("HasFile");
             PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
-            SceneManager.LoadScene(data.SceneIndex);
+            
+            loadSceneManager.loadGame(data.SceneName);
         }
         else
         {
             Debug.Log("NoFile");
-            SceneManager.LoadScene("GameScene");
+            loadSceneManager.newGame("Apartment");
         }
         
     }

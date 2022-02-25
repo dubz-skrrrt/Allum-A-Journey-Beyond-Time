@@ -18,7 +18,7 @@ public class MenuButton : MonoBehaviour
                 animator.SetBool("selected", true);
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    Debug.Log("pressed1");
+                   
                     animator.SetBool("pressed", true);
                 }
                 else if (animator.GetBool ("pressed"))
@@ -39,7 +39,7 @@ public class MenuButton : MonoBehaviour
                 animator.SetBool("selected", true);
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    Debug.Log("pressed");
+    
                     animator.SetBool("pressed", true);
                 }
                 else if (animator.GetBool ("pressed"))

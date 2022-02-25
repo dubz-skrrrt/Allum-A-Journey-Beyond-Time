@@ -29,6 +29,7 @@ public class SaveSlotData : MonoBehaviour
         // }
 
         //_instance = this;
+        //this.transform.parent = null;
         DontDestroyOnLoad(this.gameObject);
          if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + this.gameObject.name + ".dat"))
         {

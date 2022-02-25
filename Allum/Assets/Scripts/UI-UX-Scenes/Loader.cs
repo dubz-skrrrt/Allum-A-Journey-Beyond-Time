@@ -6,14 +6,15 @@ using System;
 public static class Loader
 {
     private class LoadingMonoBehavior : MonoBehaviour { }
-    public enum Scene {
-        IntroScene,
-        Loading,
-        MainMenu,
-        GameScene,
-    }
+    public static string SceneName;
+    // public enum Scene {
+    //     Loading,
+    //     MainMenu,
+    //     Apartment,
+    //     Outside,
+    // }
     private static Action onLoaderCallback;
-    public static void load(Scene scene)
+    public static void load(string scene)
     {
         // Set the loader callback action to load the target scenes
         onLoaderCallback = () => {
@@ -21,12 +22,12 @@ public static class Loader
             loadingGameObject.AddComponent<LoadingMonoBehavior>().StartCoroutine(LoadScenesAsync(scene));
         };
         // load the loading scene each time scene changes
-        SceneManager.LoadScene(Scene.Loading.ToString());
+        SceneManager.LoadScene("Loading");
     }
-    private static IEnumerator LoadScenesAsync(Scene scene)
+    private static IEnumerator LoadScenesAsync(string scene)
     {
         yield return null;
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(scene.ToString());
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(scene);
 
         while (!asyncOperation.isDone)
         {
