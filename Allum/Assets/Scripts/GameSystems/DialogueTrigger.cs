@@ -100,7 +100,7 @@ public class DialogueTrigger : MonoBehaviour
                     if (dialogueFinished)
                     {
                         inDialogue = false;
-                        dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
+                        dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
                         index = dialogue.lines.Length-1;
                     }
                 }
