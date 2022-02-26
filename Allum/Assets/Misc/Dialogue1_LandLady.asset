@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue1_LandLady
+  m_EditorClassIdentifier: 
+  characterName: Land Lady
+  lines:
+  - characterName: Nanay Perla
+    text: "Ah, good morning hijo. How are you doing? \r"
+    hasChoices: 1
+    choices:
+      choice1: "I\u2019m doing good! Thank you for asking."
+      response1:
+        text: Good to hear!
+      choice2: "Good morning po, I\u2019m fine. How about you?"
+      response2:
+        text: Never better, still feeling great at this age, haha!
+  - characterName: Nanay Perla
+    text: Any plans for today?
+    hasChoices: 1
+    choices:
+      choice1: "Just going to take a stroll around the city. Just getting some fresh
+        air\u2026"
+      response1:
+        text: "Hmmm yea, It\u2019s a lovely day today. "
+      choice2: Nothing much. Just taking a walk.
+      response2:
+        text: Mhmm. A good day to take a walk.
+  - characterName: Nanay Perla
+    text: "Oh I almost forgot, since you\u2019re going out for a stroll would you
+      mind if I ask for a favor?"
+    hasChoices: 1
+    choices:
+      choice1: "Sure! I\u2019m free today anyway. What is it?"
+      response1:
+        text: "Oh thank you! You\u2019re such a gentleman."
+      choice2: "I don\u2019t mind. What is it?"
+      response2:
+        text: Wonderful!
+  - characterName: Nanay Perla
+    text: Anyway, I forgot to get the mail that was supposed to be sent to me. It
+      arrived early this morning at the post office. My grandson was supposed to
+      get it, but he had to help someone at the docks.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Nanay Perla
+    text: By the way, do you know the way to the post office?
+    hasChoices: 1
+    choices:
+      choice1: Yes. I know the way.
+      response1:
+        text: "That\u2019s good then."
+      choice2: Not exactly sure.
+      response2:
+        text: "Well, it\u2019s easy. Just head right past the bank, you won\u2019t
+          miss it."

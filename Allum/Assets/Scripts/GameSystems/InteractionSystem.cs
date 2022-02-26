@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
+    [SerializeField] DialogueTrigger dialogueTrigger;
     public Transform DetectionPoint;
 
     private const float detectionRadius = 0.2f;
@@ -12,15 +13,20 @@ public class InteractionSystem : MonoBehaviour
     public GameObject interactableText;
     private bool isCreated;
 
+    private void Awake()
+    {
+        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+    }
     private void Update()
     {
         if (DetectObject())
         {
+           // interactableText.transform.position =
             interactableText.SetActive(true);
             isCreated = true;
             if (InteractInput())
             {
-                Debug.Log("Interactable");
+                dialogueTrigger.isInteracting = true;
             }
             
         }else

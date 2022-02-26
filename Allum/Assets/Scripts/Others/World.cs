@@ -9,7 +9,7 @@ public class World : SwitchSceneLoader
     public float posY;
     public string previous;
     
-    public void Start()
+    public override void Start()
     {
         base.Start();
         Debug.Log("PlayerPosSaved " + prevScene);
