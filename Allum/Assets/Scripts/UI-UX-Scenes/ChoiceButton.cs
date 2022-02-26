@@ -21,7 +21,6 @@ public class ChoiceButton : MonoBehaviour
                 animator.SetBool("selected", true);
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    dialogueTrigger.choiceIndex = 0;
                     animator.SetBool("pressed", true);
                     
                 }

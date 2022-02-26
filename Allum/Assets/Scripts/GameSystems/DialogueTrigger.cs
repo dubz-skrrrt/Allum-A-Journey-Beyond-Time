@@ -69,11 +69,14 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (textDisplay.text == dialogue.lines[index].choices.response1.text)
             {
+                Debug.Log(dialogue.lines[index].choices.response1.text);
                 isRespondingDone = true;
                 isResponding = false;
+                
             }
             else if (textDisplay.text == dialogue.lines[index].choices.response2.text)
             {
+                Debug.Log(dialogue.lines[index].choices.response2.text);
                 isRespondingDone = true;
                 isResponding = false;
             }
@@ -83,6 +86,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (Input.GetAxis("Submit") == 1)
             {
+                choiceIndex = 0;
                 NextDialogue();
                 isRespondingDone = false;
                 if (index >= dialogue.lines.Length)
