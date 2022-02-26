@@ -6,16 +6,14 @@ public class Player : MonoBehaviour
     public static Player current;
     public float MovementSpeed = 1;
     public bool isFacingRight = true;
-    [SerializeField] DialogueTrigger dialogueTrigger;
-
+    public bool movementDisabled = false;
     private void Start()
     {
-        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
     }
    
     private void Update()
     {
-        if (!dialogueTrigger.inDialogue)
+        if (!movementDisabled)
         {
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;

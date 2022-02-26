@@ -10,8 +10,7 @@ public class ChoiceButton : MonoBehaviour
 
     private void Awake()
     {
-        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
-        animator = FindObjectOfType<Animator>();
+        dialogueTrigger = FindObjectOfType<DialogueTrigger>(true);
     }
     private void Update()
     {
@@ -22,6 +21,7 @@ public class ChoiceButton : MonoBehaviour
                 animator.SetBool("selected", true);
                 if (Input.GetAxis("Submit") == 1)
                 {
+                    dialogueTrigger.choiceIndex = 0;
                     animator.SetBool("pressed", true);
                     
                 }

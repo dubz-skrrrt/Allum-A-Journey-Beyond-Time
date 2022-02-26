@@ -166,22 +166,24 @@ MonoBehaviour:
   nameOfSpeaker: {fileID: 14053946}
   textDisplay: {fileID: 1042512699}
   choice1Text: {fileID: 218844381}
-  choice2Text: {fileID: 547873674}
+  choice2Text: {fileID: 3263916851655075833}
   dialogue: {fileID: 11400000, guid: df4ca4bbd2bd83340bbd2bbde24be29a, type: 2}
   dialogueBox: {fileID: 1270247068}
   choice1Button: {fileID: 1058955826}
-  choice2Button: {fileID: 717576069}
+  choice2Button: {fileID: 3263916851655075832}
+  interactionSystem: {fileID: 0}
+  player: {fileID: 0}
   keyDown: 0
   maxIndex: 1
-  index: 0
   inDialogue: 0
-  dialogueFinished: 0
   isInteracting: 0
+  dialogueFinished: 0
   isConversing: 0
   isResponding: 0
   isRespondingDone: 0
   textDisplayDone: 0
   choiceIndex: 0
+  index: 0
   typingSpeed: 0.02
 --- !u!4 &143008773
 Transform:
@@ -668,41 +670,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
---- !u!114 &547873674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3263916851128173693, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
-  m_PrefabInstance: {fileID: 3263916851655075831}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &717576069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3263916851222720626, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
-  m_PrefabInstance: {fileID: 3263916851655075831}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &717576070
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717576069}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a3103cbf05dafd4199322a967345f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &723515609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 984572849792174626, guid: b48c66b878156934d828911220743de8, type: 3}
@@ -970,26 +937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1809c1020fba608498a227bf47b43840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameOfSpeaker: {fileID: 14053946}
-  textDisplay: {fileID: 1042512699}
-  choice1Text: {fileID: 218844381}
-  choice2Text: {fileID: 547873674}
-  dialogue:
-  - {fileID: 11400000, guid: df4ca4bbd2bd83340bbd2bbde24be29a, type: 2}
-  choice1Button: {fileID: 1058955826}
-  choice2Button: {fileID: 717576069}
-  keyDown: 0
-  maxIndex: 1
-  index: 0
-  inDialogue: 0
-  dialogueFinished: 0
-  isInteracting: 0
-  isConversing: 0
-  isResponding: 0
-  isRespondingDone: 0
-  textDisplayDone: 0
-  choiceIndex: 0
-  typingSpeed: 0.02
 --- !u!4 &980384728
 Transform:
   m_ObjectHideFlags: 0
@@ -1135,25 +1082,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3263916851403523525, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
   m_PrefabInstance: {fileID: 3263916851655075831}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1058955831
+--- !u!95 &1058955828 stripped
 Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1058955831, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+  m_PrefabInstance: {fileID: 3263916851655075831}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058955826}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a3103cbf05dafd4199322a967345f01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1062899918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,6 +1981,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1062899922}
     m_Modifications:
+    - target: {fileID: 2626301325418185758, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: m_Name
+      value: Choice2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2626301325418185758, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3263916850676337002, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2136,17 +2077,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 3263916851403523524, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
-      propertyPath: m_LocalScale.x
+    - target: {fileID: 3263916851222720626, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3263916851403523524, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 3263916851403523521, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1058955828}
     - target: {fileID: 3263916851403523525, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6619698849195968684, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3263916851655075834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+--- !u!1 &3263916851655075832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2626301325418185758, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+  m_PrefabInstance: {fileID: 3263916851655075831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3263916851655075833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1865208866882581901, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+  m_PrefabInstance: {fileID: 3263916851655075831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &3263916851655075834 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3127566654362166925, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+  m_PrefabInstance: {fileID: 3263916851655075831}
+  m_PrefabAsset: {fileID: 0}

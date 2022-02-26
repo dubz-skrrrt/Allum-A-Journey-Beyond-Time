@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
-    [SerializeField] DialogueTrigger dialogueTrigger;
     public Transform DetectionPoint;
-
     private const float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
-
+    public bool interacting;
     public GameObject interactableText;
     private bool isCreated;
 
-    private void Awake()
-    {
-        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
-    }
+ 
     private void Update()
     {
         if (DetectObject())
@@ -26,7 +21,7 @@ public class InteractionSystem : MonoBehaviour
             isCreated = true;
             if (InteractInput())
             {
-                dialogueTrigger.isInteracting = true;
+                interacting = true;
             }
             
         }else

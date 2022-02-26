@@ -12,28 +12,30 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject choice1Button;
     public GameObject choice2Button;
+    [SerializeField] InteractionSystem interactionSystem;
+    [SerializeField] Player player;
     [SerializeField] bool keyDown;
     [SerializeField] int maxIndex;
-    
-    public int index;
+    public static DialogueTrigger instance;
     public bool inDialogue;
-    public bool dialogueFinished;
     public bool isInteracting;
-    public bool isConversing;
-    public bool isResponding;
-    public bool isRespondingDone;
-    public bool textDisplayDone;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone;
     public int choiceIndex;
+    public int index;
     public float typingSpeed;
-
-    void Start()
+    private void Awake()
     {
-        
+        instance = this;
+        interactionSystem = FindObjectOfType<InteractionSystem>();
+        player = FindObjectOfType<Player>();
     }
-
     private void Update()
     {
-        
+        if (interactionSystem.interacting)
+        {
+            isInteracting = true;
+            player.movementDisabled = true;
+        }
         if (isInteracting)
         {
             dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
@@ -41,6 +43,7 @@ public class DialogueTrigger : MonoBehaviour
             StartCoroutine(Type());
             isInteracting = false;
             isConversing = true;
+            interactionSystem.interacting = false;
 
         }
 
@@ -100,6 +103,7 @@ public class DialogueTrigger : MonoBehaviour
                     if (dialogueFinished)
                     {
                         inDialogue = false;
+                        player.movementDisabled = false;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
                         index = dialogue.lines.Length-1;
                     }
