@@ -294,8 +294,8 @@ MonoBehaviour:
   choice1Button: {fileID: 1058955826}
   choice2Button: {fileID: 717576069}
   keyDown: 0
-  maxIndex: 0
-  index: 1
+  maxIndex: 1
+  index: 0
   inDialogue: 0
   dialogueFinished: 0
   isInteracting: 0
