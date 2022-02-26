@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public TextMeshProUGUI choice1Text;
     public TextMeshProUGUI choice2Text;
     public ScriptableDialogue dialogue;
+    public GameObject dialogueBox;
     public GameObject choice1Button;
     public GameObject choice2Button;
     [SerializeField] bool keyDown;
@@ -35,6 +36,7 @@ public class DialogueTrigger : MonoBehaviour
         
         if (isInteracting)
         {
+            dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
             inDialogue = true;
             StartCoroutine(Type());
             isInteracting = false;
@@ -98,6 +100,7 @@ public class DialogueTrigger : MonoBehaviour
                     if (dialogueFinished)
                     {
                         inDialogue = false;
+                        dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
                         index = dialogue.lines.Length-1;
                     }
                 }

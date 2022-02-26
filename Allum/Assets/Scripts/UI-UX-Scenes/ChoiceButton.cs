@@ -5,11 +5,13 @@ using UnityEngine;
 public class ChoiceButton : MonoBehaviour
 {
     [SerializeField] DialogueTrigger dialogueTrigger;
+    [SerializeField] Animator animator;
     public int thisIndex;
 
     private void Awake()
     {
         dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        animator = FindObjectOfType<Animator>();
     }
     private void Update()
     {
@@ -17,12 +19,28 @@ public class ChoiceButton : MonoBehaviour
         {
             if (dialogueTrigger.choiceIndex == thisIndex)
             {
+                animator.SetBool("selected", true);
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    dialogueTrigger.choiceResponse();
-                    dialogueTrigger.textDisplayDone = false;
+                    animator.SetBool("pressed", true);
+                    
+                }
+                else if (animator.GetBool ("pressed"))
+                {
+                    animator.SetBool("pressed", false);
+
                 }
             }
+             else
+            {
+                animator.SetBool ("selected", false);
+            }
         }
+    }
+
+    public void OnPressResponse()
+    {
+        dialogueTrigger.choiceResponse();
+        dialogueTrigger.textDisplayDone = false;
     }
 }
