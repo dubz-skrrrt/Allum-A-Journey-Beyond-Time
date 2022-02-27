@@ -24,6 +24,11 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         if (!File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))
         {
+            //save file on playmode in Unity
+            if (SaveSlotData.SlotName == null)
+            {
+                SaveSlotData.SlotName = "test";
+            }
             Debug.Log(SaveSlotData.SlotName);
             SceneSwitchData();
             SavePlayer();
