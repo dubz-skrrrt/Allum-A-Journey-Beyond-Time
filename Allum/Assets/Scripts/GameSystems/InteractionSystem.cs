@@ -29,10 +29,14 @@ public class InteractionSystem : MonoBehaviour
             }
             if (InteractInput())
             {
-                isCreated = true;
                 interacting = true;
+                isCreated = true;
                 if (!isDoor)
+                {
+                    
                     NPCDialogue.GetComponent<DialogueTrigger>().isInteracting = true;
+                }
+                    
                 
             }
             
@@ -58,6 +62,13 @@ public class InteractionSystem : MonoBehaviour
             NPCDialogue = other.gameObject;
             interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubbleDoor;
             isDoor = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == 10)
+        {
+            isDoor = false;
         }
     }
     bool InteractInput()
