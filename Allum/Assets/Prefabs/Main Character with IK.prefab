@@ -452,7 +452,7 @@ MonoBehaviour:
   - {fileID: 3229450306335111878}
   - {fileID: 5128608258925241589}
   m_Bounds:
-    m_Center: {x: -0.4422388, y: 0.087481976, z: 0}
+    m_Center: {x: -0.4422388, y: 0.087482095, z: 0}
     m_Extent: {x: 0.6817491, y: 2.0259717, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -565,7 +565,7 @@ MonoBehaviour:
   - {fileID: 7582276292409085310}
   - {fileID: 7862722861287107423}
   m_Bounds:
-    m_Center: {x: -0.03802377, y: -0.0015814304, z: 0}
+    m_Center: {x: -0.03802377, y: -0.0015819073, z: 0}
     m_Extent: {x: 0.6304946, y: 2.8840232, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -642,7 +642,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 8
   m_Sprite: {fileID: -2908741498372160798, guid: d10b459fd30c97f4b8bd914f6855d8ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -671,8 +671,8 @@ MonoBehaviour:
   - {fileID: 3229450306335111878}
   - {fileID: 1649555079569423735}
   m_Bounds:
-    m_Center: {x: -0.1315108, y: 0.006248474, z: 0}
-    m_Extent: {x: 0.6950673, y: 0.80229473, z: 0}
+    m_Center: {x: -0.1315108, y: 0.0062485933, z: 0}
+    m_Extent: {x: 0.6950673, y: 0.8022946, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b536a2f57d4f5c44a8cfe1abd574cd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
+  MovementSpeed: 3
   isFacingRight: 1
   movementDisabled: 0
 --- !u!1 &6125009628003075149
