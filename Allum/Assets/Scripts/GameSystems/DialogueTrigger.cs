@@ -31,19 +31,19 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (interactionSystem.interacting)
-        {
-            isInteracting = true;
-            player.movementDisabled = true;
-        }
+        // if (interactionSystem.interacting)
+        // {
+        //     isInteracting = true;
+            
+        // }
         if (isInteracting)
         {
+            player.movementDisabled = true;
             dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
             inDialogue = true;
             StartCoroutine(Type());
             isInteracting = false;
             isConversing = true;
-            interactionSystem.interacting = false;
 
         }
 
@@ -108,6 +108,8 @@ public class DialogueTrigger : MonoBehaviour
                     {
                         inDialogue = false;
                         player.movementDisabled = false;
+                        interactionSystem.interacting = false;
+                        interactionSystem.isCreated = false;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
                         index = dialogue.lines.Length-1;
                     }

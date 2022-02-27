@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue2_Postman
+  m_EditorClassIdentifier: 
+  characterName: Postman
+  lines:
+  - characterName: Postman
+    text: Good morning! How can I help you?
+    hasChoices: 1
+    choices:
+      choice1: I was asked to get some mail..
+      response1:
+        text: Oh, is it by any chance addressed to a name Perlah?
+      choice2: I was asked to get a mail from my land lady. She said I can get it
+        here.
+      response2:
+        text: Ah! are you talking about the land lady from "Everyday Apartment"?
+  - characterName: Francisco
+    text: Yes, Nanay Perlah. She's been my land lady for quite some time now, but
+      I still barely know her.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Postman
+    text: Ah... yes, that lady likes to be alone most of the time. She barely talks
+      about herself but she's a good person.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Postman
+    text: There are also talks that she was a member of some kind of group that was
+      abolished years ago. Well I don't know if it's true or not, just a weird rumor.
+    hasChoices: 1
+    choices:
+      choice1: Hmm... well I really dont believe in such rumors, I really don't care.
+      response1:
+        text: Is that so...?
+      choice2: Oh really? Well, I'm kinda curious now that you told me. I'm gonna
+        ask her a few questions later.
+      response2:
+        text: Alright then...
+  - characterName: Postman
+    text: Oh well, here's the mail for her.
+    hasChoices: 1
+    choices:
+      choice1: Thank you Mr. Postman! I have to get going.
+      response1:
+        text: Have a good day!
+      choice2: Thanks.
+      response2:
+        text: Alright, see you around.
