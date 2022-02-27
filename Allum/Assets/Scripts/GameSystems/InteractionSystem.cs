@@ -14,7 +14,7 @@ public class InteractionSystem : MonoBehaviour
     public bool interacting;
     public GameObject interactablePrompt;
     public bool isCreated;
-
+    private bool isDoor;
  
     private void Update()
     {
@@ -31,7 +31,8 @@ public class InteractionSystem : MonoBehaviour
             {
                 isCreated = true;
                 interacting = true;
-                NPCDialogue.GetComponent<DialogueTrigger>().isInteracting = true;
+                if (!isDoor)
+                    NPCDialogue.GetComponent<DialogueTrigger>().isInteracting = true;
                 
             }
             
@@ -56,6 +57,7 @@ public class InteractionSystem : MonoBehaviour
         {
             NPCDialogue = other.gameObject;
             interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubbleDoor;
+            isDoor = true;
         }
     }
     bool InteractInput()
