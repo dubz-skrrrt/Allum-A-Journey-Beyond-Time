@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1635965464096876351}
   - component: {fileID: 3419454613353941658}
   - component: {fileID: 1961782825636194211}
+  - component: {fileID: 9217502322553741924}
   m_Layer: 0
   m_Name: WorldSceneSwitch
   m_TagString: Untagged
@@ -60,3 +61,19 @@ MonoBehaviour:
   posX: 25.47548
   posY: -2.778193
   previous: Apartment
+--- !u!114 &9217502322553741924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635965464096876349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d440242b983d5a54a951dba54a217812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  posX: 18.05115
+  posY: 4.654581
+  previous: PostOffice

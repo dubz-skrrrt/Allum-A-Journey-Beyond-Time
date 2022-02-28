@@ -16,12 +16,11 @@ public class DoorOpen : MonoBehaviour
     private void Awake()
     {
         switchSceneLoader = FindObjectOfType<SwitchSceneLoader>();
-        saveManager = FindObjectOfType<SaveManager>();
-        saveManager.SceneSwitchData();
     }
     private void Start()
     {
-        
+        saveManager = FindObjectOfType<SaveManager>();
+        saveManager.SceneSwitchData();
     }
     private void Update()
     {

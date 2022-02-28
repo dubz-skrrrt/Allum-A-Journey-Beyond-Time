@@ -18,7 +18,6 @@ public class SwitchSceneLoader : MonoBehaviour
     }
     public void SwitchScene(string sceneName)
     {
-        
         prevScene = currentScene;
         Debug.Log(prevScene);
         Loader.load(sceneName);
