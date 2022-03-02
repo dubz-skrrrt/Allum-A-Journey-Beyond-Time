@@ -6,7 +6,7 @@ using System.IO;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance;
-    public Player player;
+    [SerializeField] Player player;
     public int sceneNum;
     public string sceneName;
     public bool sceneSwitchSave;
@@ -41,8 +41,12 @@ public class SaveManager : MonoBehaviour
     }
     private void Start()
     {
-        LoadPlayer();
-        SavePlayer();
+        if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !sceneSwitchSave)
+        {
+            LoadPlayer();
+            SavePlayer();
+        }
+        
     }
 
     private void Update()
@@ -52,12 +56,14 @@ public class SaveManager : MonoBehaviour
             start = false;
             canWalk = true;
         }
+                
     }
     public void SceneSwitchData()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         sceneName = SceneManager.GetActiveScene().name;
+        //sceneSwitchSave = false;
     }
     public void SavePlayer()
     {
@@ -70,6 +76,7 @@ public class SaveManager : MonoBehaviour
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
+        canWalk = data.wakingup;
         Vector3 scale = player.transform.localScale;
         scale.x = data.facingRight[0];
         scale.y = data.facingRight[1];

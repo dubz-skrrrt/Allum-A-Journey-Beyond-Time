@@ -28,14 +28,13 @@ public class DoorOpen : MonoBehaviour
         if (saveManager.sceneSwitchSave)
         {
             saveManager.SavePlayer();
-            saveManager.sceneSwitchSave = false;
         }
         if (playerDetected)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 switchSceneLoader.SwitchScene(nameOfScene);
-                saveManager.sceneSwitchSave = true;
+                SaveManager.instance.sceneSwitchSave = true;
             }
         }
     }

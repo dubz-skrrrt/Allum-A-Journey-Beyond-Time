@@ -34,7 +34,7 @@ public static class Loader
             yield return null;
         }
     }
-    public static void LoaderCallBack()
+    public static void OnLoaderCallBack()
     {
         // Triggered after the first update whih lets the screen refresh
         // Execute the loader callback ation which will load the target scene 
@@ -42,6 +42,7 @@ public static class Loader
         {
             onLoaderCallback();
             onLoaderCallback = null;
+            
         }
     }
 }

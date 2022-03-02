@@ -34,6 +34,12 @@ public class Player : MonoBehaviour
             else
                 this.GetComponent<Animator>().SetBool("isWalking", false);
         }
+
+        if (SaveManager.instance.sceneSwitchSave)
+        {
+            SaveManager.instance.SceneSwitchData();
+            SaveManager.instance.sceneSwitchSave = false;
+        }
         
     }
 

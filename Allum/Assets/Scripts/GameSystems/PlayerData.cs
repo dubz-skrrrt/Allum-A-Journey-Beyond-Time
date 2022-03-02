@@ -10,12 +10,14 @@ public class PlayerData
    public float[] position;
    public float[] facingRight;
    public bool isfacing;
+   public bool wakingup;
 
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
+      wakingup = SaveManager.instance.canWalk;
       SceneIndex = SaveManager.instance.sceneNum;
       SceneName = SaveManager.instance.sceneName;
       position = new float[]

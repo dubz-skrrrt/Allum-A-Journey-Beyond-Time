@@ -5,7 +5,6 @@ using UnityEngine;
 public class LoaderCallback : MonoBehaviour
 {
     private bool isFirstUpdate = true;
-
     private void Update()
     {
         if (isFirstUpdate)
@@ -18,6 +17,7 @@ public class LoaderCallback : MonoBehaviour
     IEnumerator LoadingDelay()
     {
         yield return new WaitForSeconds(3f);
-        Loader.LoaderCallBack();
+        Debug.Log("now");
+        Loader.OnLoaderCallBack();
     }
 }
