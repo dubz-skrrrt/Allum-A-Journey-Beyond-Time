@@ -7,14 +7,16 @@ public class Player : MonoBehaviour
     public float MovementSpeed = 1;
     public bool isFacingRight = true;
     public bool movementDisabled = false;
+    bool startAnim;
     private void Start()
     {
     }
    
     private void Update()
     {
-        if (!movementDisabled)
+        if (!movementDisabled && SaveManager.instance.canWalk)
         {
+            this.GetComponent<Animator>().SetBool("Start", true);
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
             if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)
@@ -41,5 +43,15 @@ public class Player : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+    public void onStart()
+    {
+        if (!startAnim)
+        { 
+            Debug.Log("done");
+            SaveManager.instance.start = true;
+            startAnim = true;
+        }
+        
     }
 }

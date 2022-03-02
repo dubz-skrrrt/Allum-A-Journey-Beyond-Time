@@ -10,6 +10,8 @@ public class SaveManager : MonoBehaviour
     public int sceneNum;
     public string sceneName;
     public bool sceneSwitchSave;
+    public bool start;
+    public bool canWalk;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -30,9 +32,11 @@ public class SaveManager : MonoBehaviour
                 SaveSlotData.SlotName = "test";
             }
             Debug.Log(SaveSlotData.SlotName);
+
             SceneSwitchData();
             SavePlayer();
         }
+        
         
     }
     private void Start()
@@ -41,6 +45,14 @@ public class SaveManager : MonoBehaviour
         SavePlayer();
     }
 
+    private void Update()
+    {
+        if (start)
+        {
+            start = false;
+            canWalk = true;
+        }
+    }
     public void SceneSwitchData()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
