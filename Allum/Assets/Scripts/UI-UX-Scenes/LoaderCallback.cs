@@ -17,7 +17,6 @@ public class LoaderCallback : MonoBehaviour
     IEnumerator LoadingDelay()
     {
         yield return new WaitForSeconds(3f);
-        Debug.Log("now");
         Loader.OnLoaderCallBack();
     }
 }

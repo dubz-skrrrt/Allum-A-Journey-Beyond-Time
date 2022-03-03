@@ -12,6 +12,7 @@ public class SaveManager : MonoBehaviour
     public bool sceneSwitchSave;
     public bool start;
     public bool canWalk;
+    public bool inMenu;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -43,6 +44,7 @@ public class SaveManager : MonoBehaviour
     {
         if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !sceneSwitchSave)
         {
+            SceneSwitchData();
             LoadPlayer();
             SavePlayer();
         }
@@ -53,21 +55,26 @@ public class SaveManager : MonoBehaviour
     {
         if (start)
         {
-            start = false;
             canWalk = true;
+            SavePlayer();
         }
-                
+        
+        if (inMenu)
+        {
+            Destroy(instance.gameObject);
+        }
     }
     public void SceneSwitchData()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         sceneName = SceneManager.GetActiveScene().name;
-        //sceneSwitchSave = false;
     }
     public void SavePlayer()
     {
+        Debug.Log("Saved");
         SaveSystem.SaveGameState(player, SaveSlotData.SlotName);
+        start = false;
     }
 
     public void LoadPlayer()

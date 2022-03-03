@@ -35,6 +35,7 @@ public class DoorOpen : MonoBehaviour
             {
                 switchSceneLoader.SwitchScene(nameOfScene);
                 SaveManager.instance.sceneSwitchSave = true;
+                SaveManager.instance.start = true;
             }
         }
     }

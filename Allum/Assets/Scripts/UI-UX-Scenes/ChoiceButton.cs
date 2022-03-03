@@ -36,7 +36,7 @@ public class ChoiceButton : MonoBehaviour
 
                     }
                 }
-                    else
+                else
                 {
                     animator.SetBool ("selected", false);
                 }

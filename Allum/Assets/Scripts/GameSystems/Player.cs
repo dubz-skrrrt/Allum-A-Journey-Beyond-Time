@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 public class Player : MonoBehaviour
 {
     public static Player current;
@@ -8,10 +9,7 @@ public class Player : MonoBehaviour
     public bool isFacingRight = true;
     public bool movementDisabled = false;
     bool startAnim;
-    private void Start()
-    {
-    }
-   
+
     private void Update()
     {
         if (!movementDisabled && SaveManager.instance.canWalk)

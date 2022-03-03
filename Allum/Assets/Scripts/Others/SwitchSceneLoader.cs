@@ -14,12 +14,10 @@ public class SwitchSceneLoader : MonoBehaviour
     public void GetCurrentScene()
     {
         currentScene = SceneManager.GetActiveScene().name;
-        Debug.Log(currentScene);
     }
     public void SwitchScene(string sceneName)
     {
         prevScene = currentScene;
-        Debug.Log(prevScene);
         Loader.load(sceneName);
     }
 }
