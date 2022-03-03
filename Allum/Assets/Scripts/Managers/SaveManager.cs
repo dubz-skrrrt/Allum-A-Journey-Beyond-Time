@@ -85,11 +85,13 @@ public class SaveManager : MonoBehaviour
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
         canWalk = data.wakingup;
+        //Character local scale
         Vector3 scale = player.transform.localScale;
         scale.x = data.facingRight[0];
         scale.y = data.facingRight[1];
         scale.z = data.facingRight[2];
         player.transform.localScale = scale;
+        //Character position
         Vector3 position = player.transform.position;
         position.x = data.position[0];
         position.y = data.position[1];
