@@ -62,6 +62,7 @@ public class SaveManager : MonoBehaviour
         if (inMenu)
         {
             Destroy(instance.gameObject);
+            inMenu = false;
         }
     }
     public void SceneSwitchData()
