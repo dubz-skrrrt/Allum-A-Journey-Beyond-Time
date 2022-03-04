@@ -16,6 +16,7 @@ public class DoorOpen : MonoBehaviour
     private void Awake()
     {
         switchSceneLoader = FindObjectOfType<SwitchSceneLoader>();
+
     }
     private void Start()
     {
@@ -25,16 +26,12 @@ public class DoorOpen : MonoBehaviour
     private void Update()
     {
         playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, thisisPlayer);
-        if (saveManager.sceneSwitchSave)
-        {
-            saveManager.SavePlayer();
-        }
         if (playerDetected)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                switchSceneLoader.SwitchScene(nameOfScene);
                 SaveManager.instance.sceneSwitchSave = true;
+                switchSceneLoader.SwitchScene(nameOfScene);
             }
         }
     }

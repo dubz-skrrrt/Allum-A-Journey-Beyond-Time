@@ -20,12 +20,12 @@ public class LoadSceneManager : MonoBehaviour
 
     public void newGame(string scene)
     {
-        Loader.load(scene);
+        SceneFader.instance.FadeToScene(scene);
     }
 
     public void loadGame(string sceneName)
     {
-        Loader.load(sceneName);
+        SceneFader.instance.FadeToScene(sceneName);
     }
 
     public void Quit()

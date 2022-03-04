@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
+    public static InteractionSystem instance;
     public Transform DetectionPoint;
     public Sprite thoughtBubble;
     public Sprite thoughtBubbleEye;
@@ -15,7 +16,13 @@ public class InteractionSystem : MonoBehaviour
     public GameObject interactablePrompt;
     public bool isCreated;
     private bool isDoor;
- 
+    private bool isItem;
+    private bool isNPC;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Update()
     {
         if (DetectObject())
@@ -31,12 +38,16 @@ public class InteractionSystem : MonoBehaviour
             {
                 interacting = true;
                 isCreated = true;
-                if (!isDoor)
+                if (isNPC)
                 {
-                    
                     NPCDialogue.GetComponent<DialogueTrigger>().isInteracting = true;
+                    isNPC = false;
                 }
-                    
+                if (isItem)
+                {
+                    NPCDialogue.GetComponent<ItemDialogueTrigger>().isInteracting = true;
+                    isItem = false;
+                }
                 
             }
             
@@ -51,11 +62,13 @@ public class InteractionSystem : MonoBehaviour
         {
             NPCDialogue = other.gameObject;
             interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubble;
+            isNPC = true;
         }
         if (other.gameObject.layer == 6)
         {
             NPCDialogue = other.gameObject;
             interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubbleEye;
+            isItem = true;
         }
         if (other.gameObject.layer == 10)
         {
@@ -66,8 +79,10 @@ public class InteractionSystem : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer == 10)
+        if (other.gameObject.layer == 10 || other.gameObject.layer == 6 || other.gameObject.layer == 9)
         {
+            isItem = false;
+            isNPC = false;
             isDoor = false;
         }
     }

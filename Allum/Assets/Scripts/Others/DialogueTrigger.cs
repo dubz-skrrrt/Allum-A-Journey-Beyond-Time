@@ -36,6 +36,11 @@ public class DialogueTrigger : MonoBehaviour
         //     isInteracting = true;
             
         // }
+        Debug.Log(isInteracting);
+        if (player.DialogueIsDone)
+        {
+            index = dialogue.lines.Length-1;
+        }
         if (isInteracting)
         {
             player.movementDisabled = true;
@@ -69,14 +74,12 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (textDisplay.text == dialogue.lines[index].choices.response1.text)
             {
-                Debug.Log(dialogue.lines[index].choices.response1.text);
                 isRespondingDone = true;
                 isResponding = false;
                 
             }
             else if (textDisplay.text == dialogue.lines[index].choices.response2.text)
             {
-                Debug.Log(dialogue.lines[index].choices.response2.text);
                 isRespondingDone = true;
                 isResponding = false;
             }
@@ -111,6 +114,7 @@ public class DialogueTrigger : MonoBehaviour
                         interactionSystem.interacting = false;
                         interactionSystem.isCreated = false;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
+                        player.DialogueIsDone = true;
                         index = dialogue.lines.Length-1;
                     }
                 }

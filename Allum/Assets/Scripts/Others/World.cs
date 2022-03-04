@@ -8,14 +8,13 @@ public class World : SwitchSceneLoader
     public float posX;
     public float posY;
     public string previous;
-    
     public override void Start()
     {
         base.Start();
-        Debug.Log("PlayerPosSaved " + prevScene);
         if (prevScene == previous)
         {
             Debug.Log("PlayerPosSaved");
+            Player.current.DialogueIsDone = DialogueSceneDone;
             player.position = new Vector2(posX, posY);
             player.localScale = player.transform.localScale;
         }

@@ -13,6 +13,7 @@ public class SaveManager : MonoBehaviour
     public bool start;
     public bool canWalk;
     public bool inMenu;
+    public bool FirstMissionComplete;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -37,6 +38,13 @@ public class SaveManager : MonoBehaviour
             SceneSwitchData();
             SavePlayer();
         }
+        else
+        {
+            Debug.Log("LoadedPlayer");
+            SceneSwitchData();
+            LoadPlayer();
+            SavePlayer();
+        }
         
         
     }
@@ -44,9 +52,11 @@ public class SaveManager : MonoBehaviour
     {
         if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !sceneSwitchSave)
         {
+            Debug.Log("LoadedPlayer");
             SceneSwitchData();
             LoadPlayer();
             SavePlayer();
+            
         }
         
     }
@@ -84,7 +94,10 @@ public class SaveManager : MonoBehaviour
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
+        SwitchSceneLoader.instance.DialogueSceneDone = data.dialogueDone;
         canWalk = data.wakingup;
+        FrameSwitchingSystem.pastTime = data.pastFrames;
+        FirstMissionComplete = data.firstMission;
         //Character local scale
         Vector3 scale = player.transform.localScale;
         scale.x = data.facingRight[0];
@@ -97,5 +110,15 @@ public class SaveManager : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         player.transform.position = position;
+    }
+
+    public void LoadPlayerMissionData()
+    {
+        PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
+        Debug.Log("Loaded");
+        sceneNum = data.SceneIndex;
+        sceneName = data.SceneName;
+        canWalk = data.wakingup;
+        FirstMissionComplete = data.firstMission;
     }
 }

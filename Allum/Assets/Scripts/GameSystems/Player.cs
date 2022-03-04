@@ -8,18 +8,38 @@ public class Player : MonoBehaviour
     public float MovementSpeed = 1;
     public bool isFacingRight = true;
     public bool movementDisabled = false;
+    public bool DialogueIsDone;
+    public static Animator animator;
     bool startAnim;
-
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        current = this;
+        DialogueIsDone = false;
+    }
+    private void Start()
+    {
+        if (SaveManager.instance.sceneSwitchSave)
+        {
+            SaveManager.instance.sceneSwitchSave = false;
+        }
+        if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))
+        {
+            SaveManager.instance.LoadPlayerMissionData();
+            SaveManager.instance.SceneSwitchData();
+            SaveManager.instance.SavePlayer();
+        }
+    }
     private void Update()
     {
         if (!movementDisabled && SaveManager.instance.canWalk)
         {
-            this.GetComponent<Animator>().SetBool("Start", true);
+            animator.SetBool("Start", true);
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
             if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)
             {
-                this.GetComponent<Animator>().SetBool("isWalking", true);
+                animator.SetBool("isWalking", true);
                 if (Input.GetKeyDown(KeyCode.D) && !isFacingRight)
                 {
                     Flip();
@@ -30,15 +50,18 @@ public class Player : MonoBehaviour
                 }
             }
             else
-                this.GetComponent<Animator>().SetBool("isWalking", false);
+                animator.SetBool("isWalking", false);
         }
 
         if (SaveManager.instance.sceneSwitchSave)
         {
             SaveManager.instance.SceneSwitchData();
-            SaveManager.instance.sceneSwitchSave = false;
         }
         
+        if (ItemDialogueTrigger.onCollide)
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 
     public void Flip()

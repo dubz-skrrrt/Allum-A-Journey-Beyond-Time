@@ -11,12 +11,18 @@ public class PlayerData
    public float[] facingRight;
    public bool isfacing;
    public bool wakingup;
-
+   public bool dialogueDone;
+   public string prevScene;
+   public bool firstMission;
+   public bool pastFrames;
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
+      firstMission = SaveManager.instance.FirstMissionComplete;
+      pastFrames = FrameSwitchingSystem.pastTime;
+      dialogueDone = SwitchSceneLoader.instance.DialogueSceneDone;
       wakingup = SaveManager.instance.canWalk;
       SceneIndex = SaveManager.instance.sceneNum;
       SceneName = SaveManager.instance.sceneName;
