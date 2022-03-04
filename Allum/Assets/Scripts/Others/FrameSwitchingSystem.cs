@@ -8,10 +8,15 @@ public class FrameSwitchingSystem : MonoBehaviour
     public GameObject past;
     public GameObject future;
     public GameObject timePiece;
-    private bool timepieceAppear;
+    public bool timepieceAppear;
+    public static FrameSwitchingSystem instance;
     public static bool pastTime;
     public GameObject[] frames;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Update()
     {
         if (SaveManager.instance.FirstMissionComplete)

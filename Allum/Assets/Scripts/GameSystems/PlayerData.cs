@@ -15,12 +15,14 @@ public class PlayerData
    public string prevScene;
    public bool firstMission;
    public bool pastFrames;
+   public bool timePieceOFF;
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
       firstMission = SaveManager.instance.FirstMissionComplete;
+      timePieceOFF = FrameSwitchingSystem.instance.timepieceAppear;
       pastFrames = FrameSwitchingSystem.pastTime;
       dialogueDone = SwitchSceneLoader.instance.DialogueSceneDone;
       wakingup = SaveManager.instance.canWalk;
