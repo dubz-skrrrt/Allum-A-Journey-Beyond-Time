@@ -94,7 +94,7 @@ public class SaveManager : MonoBehaviour
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
-        SwitchSceneLoader.instance.DialogueSceneDone = data.dialogueDone;
+        player.DialogueIsDone = data.dialogueDone;
         canWalk = data.wakingup;
         FrameSwitchingSystem.pastTime = data.pastFrames;
         FirstMissionComplete = data.firstMission;

@@ -21,10 +21,10 @@ public class FrameSwitchingSystem : MonoBehaviour
                 timePiece.SetActive(true);
                 if (pastTime)
                 {
-                    Debug.Log(ItemDialogueTrigger.instance.dialogueFinished);
+                    Debug.Log(ItemDialogueTrigger.dialogueFinished);
                     past.SetActive(true);
                     future.SetActive(false);
-                    if (ItemDialogueTrigger.instance.dialogueFinished)
+                    if (ItemDialogueTrigger.dialogueFinished)
                     {
                         Debug.Log("Hide");
                         timepieceAppear = true;

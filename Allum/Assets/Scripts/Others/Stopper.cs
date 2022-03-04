@@ -32,6 +32,7 @@ public class Stopper : MonoBehaviour
         if (other.gameObject.layer == 8)
         {
             Debug.Log("hitting");
+
             ItemDialogueTrigger.onCollide = true;
             
         }

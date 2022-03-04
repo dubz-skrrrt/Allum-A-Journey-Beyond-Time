@@ -18,7 +18,7 @@ public class SwitchSceneLoader : MonoBehaviour
     }
     private void Update()
     {
-        if (InteractionSystem.instance.interacting)
+        if (InteractionSystem.instance.interacting && !Player.current.DialogueIsDone)
         {
             DialogueSceneDone = true;
         }

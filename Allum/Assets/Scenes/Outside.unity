@@ -4406,7 +4406,6 @@ MonoBehaviour:
   interactionSystem: {fileID: 0}
   player: {fileID: 0}
   isInteracting: 0
-  dialogueFinished: 0
   isConversing: 0
   isRespondingDone: 0
   inDialogue: 0
@@ -6503,7 +6502,6 @@ MonoBehaviour:
   interactionSystem: {fileID: 0}
   player: {fileID: 0}
   isInteracting: 0
-  dialogueFinished: 0
   isConversing: 0
   isRespondingDone: 0
   inDialogue: 0
@@ -7423,7 +7421,6 @@ Transform:
   - {fileID: 1318908047}
   - {fileID: 1764720078}
   - {fileID: 1898725414}
-  - {fileID: 1269855225}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8250,12 +8247,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269855224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.48, y: -1.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1200585591}
-  m_RootOrder: 5
+  m_Father: {fileID: 1764720078}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1269855227
 BoxCollider2D:
@@ -8315,7 +8312,6 @@ MonoBehaviour:
   interactionSystem: {fileID: 0}
   player: {fileID: 0}
   isInteracting: 0
-  dialogueFinished: 0
   isConversing: 0
   isRespondingDone: 0
   inDialogue: 0
@@ -9175,7 +9171,6 @@ MonoBehaviour:
   interactionSystem: {fileID: 0}
   player: {fileID: 0}
   isInteracting: 0
-  dialogueFinished: 0
   isConversing: 0
   isRespondingDone: 0
   inDialogue: 0
@@ -10806,6 +10801,7 @@ Transform:
   - {fileID: 143008773}
   - {fileID: 277501832}
   - {fileID: 739329867}
+  - {fileID: 1269855225}
   m_Father: {fileID: 1200585591}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

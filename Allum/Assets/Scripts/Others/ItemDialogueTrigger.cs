@@ -10,10 +10,10 @@ public class ItemDialogueTrigger : MonoBehaviour
     public GameObject dialogueBox;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
-    public bool isInteracting, dialogueFinished, isConversing, isRespondingDone, inDialogue, timetravelPiece;
+    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece;
     public int index;
     public float typingSpeed;
-    public static bool  onCollide;
+    public static bool dialogueFinished, onCollide;
     public static ItemDialogueTrigger instance;
     private void Awake()
     {
