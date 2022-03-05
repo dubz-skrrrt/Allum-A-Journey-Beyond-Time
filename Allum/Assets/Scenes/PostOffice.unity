@@ -3817,6 +3817,7 @@ GameObject:
   - component: {fileID: 1820788146}
   - component: {fileID: 1820788148}
   - component: {fileID: 1820788149}
+  - component: {fileID: 1820788150}
   m_Layer: 9
   m_Name: Postman
   m_TagString: Untagged
@@ -3950,6 +3951,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1341515, y: 6.5766945}
   m_EdgeRadius: 0
+--- !u!114 &1820788150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820788145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668d283e28560c944826bfd961452b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: PostMan
 --- !u!1 &1900727644
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance;
     [SerializeField] Player player;
+    public PlayerData data;
+    //public List<string> NPCs = new List<string>();
     public int sceneNum;
     public string sceneName;
     public bool sceneSwitchSave;
@@ -38,26 +40,26 @@ public class SaveManager : MonoBehaviour
             SceneSwitchData();
             SavePlayer();
         }
-        else
-        {
-            Debug.Log("LoadedPlayer");
-            SceneSwitchData();
-            LoadPlayer();
-            SavePlayer();
-        }
-        
-        
     }
     private void Start()
     {
         if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !sceneSwitchSave)
         {
             Debug.Log("LoadedPlayer");
+            LoadPlayerMissionData();
             SceneSwitchData();
             LoadPlayer();
             SavePlayer();
             
         }
+        //  if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && sceneSwitchSave)
+        // {
+        //     Debug.Log("LoadedPlayer");
+        //     LoadPlayerMissionData();
+        //     SceneSwitchData();
+        //     SavePlayer();
+        //     sceneSwitchSave = false;
+        // }
         
     }
 
@@ -80,6 +82,7 @@ public class SaveManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         sceneName = SceneManager.GetActiveScene().name;
+        player.transform.position = player.transform.position;
     }
     public void SavePlayer()
     {
@@ -90,12 +93,22 @@ public class SaveManager : MonoBehaviour
 
     public void LoadPlayer()
     {
-        PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
+        data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
-        player.DialogueIsDone = data.dialogueDone;
-        FrameSwitchingSystem.instance.timepieceAppear = data.timePieceOFF;
+        
+        foreach (string NPCname in data.NPCNames)
+        {
+            Debug.Log("Loaded" + NPCname);
+            if (NPCDIalogueChecker.NPCName == NPCname)
+            {
+                Debug.Log("thisDone" + " " + NPCname);
+                NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
+            }
+        }
+        
+        TimePiece.timepieceAppear = data.timePieceOn;
         canWalk = data.wakingup;
         FrameSwitchingSystem.pastTime = data.pastFrames;
         FirstMissionComplete = data.firstMission;
@@ -115,11 +128,22 @@ public class SaveManager : MonoBehaviour
 
     public void LoadPlayerMissionData()
     {
-        PlayerData data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
-        Debug.Log("Loaded");
+        data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
         sceneNum = data.SceneIndex;
+        foreach (string NPCname in data.NPCNames)
+        {
+            Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
+            if (NPCDIalogueChecker.NPCName == NPCname)
+            {
+                Debug.Log("thisDone");
+                NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
+                
+            }
+        }
         sceneName = data.SceneName;
         canWalk = data.wakingup;
+        TimePiece.timepieceAppear = data.timePieceOn;
         FirstMissionComplete = data.firstMission;
+        FrameSwitchingSystem.pastTime = data.pastFrames;
     }
 }

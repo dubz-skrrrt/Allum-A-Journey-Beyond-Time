@@ -7,8 +7,6 @@ public class FrameSwitchingSystem : MonoBehaviour
     public GameObject activeFrame;
     public GameObject past;
     public GameObject future;
-    public GameObject timePiece;
-    public bool timepieceAppear;
     public static FrameSwitchingSystem instance;
     public static bool pastTime;
     public GameObject[] frames;
@@ -21,30 +19,16 @@ public class FrameSwitchingSystem : MonoBehaviour
     {
         if (SaveManager.instance.FirstMissionComplete)
         {
-            if (!timepieceAppear)
+            if (pastTime)
             {
-                timePiece.SetActive(true);
-                if (pastTime)
-                {
-                    Debug.Log(ItemDialogueTrigger.dialogueFinished);
-                    past.SetActive(true);
-                    future.SetActive(false);
-                    if (ItemDialogueTrigger.dialogueFinished)
-                    {
-                        Debug.Log("Hide");
-                        timepieceAppear = true;
-                    }
-                }
-            }else
-            {
-                timePiece.SetActive(false);
-            }
-            
-            
+                past.SetActive(true);
+                future.SetActive(false);
+            } 
         }
         else
         {
-            timePiece.SetActive(false);
+            past.SetActive(false);
+            future.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

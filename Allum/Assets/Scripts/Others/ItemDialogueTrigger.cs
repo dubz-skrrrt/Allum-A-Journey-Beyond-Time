@@ -49,6 +49,8 @@ public class ItemDialogueTrigger : MonoBehaviour
                         CameraShake.instance.ShakeCamera(3f, 2f);
                         FrameSwitchingSystem.pastTime = true;
 
+                        isRespondingDone = true;
+                        isConversing = false;
                     }
                     isRespondingDone = true;
                     isConversing = false;
@@ -95,7 +97,10 @@ public class ItemDialogueTrigger : MonoBehaviour
         }
     }
 
-
+    IEnumerator DialogueDelay()
+    {
+        yield return new WaitForSeconds(2f);
+    }
     IEnumerator Type()
     {
         nameOfSpeaker.text = dialogue.lines[index].characterName;   

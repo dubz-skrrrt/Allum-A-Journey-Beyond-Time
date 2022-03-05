@@ -36,9 +36,9 @@ public class DialogueTrigger : MonoBehaviour
         //     isInteracting = true;
             
         // }
-        Debug.Log(isInteracting);
-        if (player.DialogueIsDone)
+        if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
+            Debug.Log("lastLines");
             index = dialogue.lines.Length-1;
         }
         if (isInteracting)

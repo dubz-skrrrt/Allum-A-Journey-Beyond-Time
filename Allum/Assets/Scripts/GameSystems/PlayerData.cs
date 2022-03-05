@@ -15,16 +15,17 @@ public class PlayerData
    public string prevScene;
    public bool firstMission;
    public bool pastFrames;
-   public bool timePieceOFF;
+   public bool timePieceOn;
+   public List<string> NPCNames;
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
       firstMission = SaveManager.instance.FirstMissionComplete;
-      timePieceOFF = FrameSwitchingSystem.instance.timepieceAppear;
+      timePieceOn = TimePiece.timepieceAppear;
       pastFrames = FrameSwitchingSystem.pastTime;
-      dialogueDone = SwitchSceneLoader.instance.DialogueSceneDone;
+      dialogueDone = NPCDIalogueChecker.NPCDialogueDone;
       wakingup = SaveManager.instance.canWalk;
       SceneIndex = SaveManager.instance.sceneNum;
       SceneName = SaveManager.instance.sceneName;
@@ -37,5 +38,7 @@ public class PlayerData
       {
          scale.x, scale.y, scale.z
       };
+      NPCNames = new List<string>();
+      NPCNames.Add(NPCDIalogueChecker.NPCName);
    }
 }

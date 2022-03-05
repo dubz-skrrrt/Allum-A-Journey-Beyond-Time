@@ -15,20 +15,21 @@ public class Player : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         current = this;
-        DialogueIsDone = false;
     }
     private void Start()
     {
-        if (SaveManager.instance.sceneSwitchSave)
-        {
-            SaveManager.instance.sceneSwitchSave = false;
-        }
-        if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))
-        {
-            SaveManager.instance.LoadPlayerMissionData();
-            SaveManager.instance.SceneSwitchData();
-            SaveManager.instance.SavePlayer();
-        }
+        // if (SaveManager.instance.sceneSwitchSave)
+        // {
+        //     SaveManager.instance.sceneSwitchSave = false;
+        // }
+        // if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !SaveManager.instance.sceneSwitchSave)
+        // {
+        //     Debug.Log("SaveFirst");
+            
+        //     SaveManager.instance.LoadPlayerMissionData();
+        //     SaveManager.instance.SceneSwitchData();
+        //     SaveManager.instance.SavePlayer();
+        // }
     }
     private void Update()
     {

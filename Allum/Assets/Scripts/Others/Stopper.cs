@@ -13,7 +13,19 @@ public class Stopper : MonoBehaviour
     }
     private void Update()
     {
-        if (Player.current.DialogueIsDone)
+        if (NPCDIalogueChecker.NPCDialogueDone)
+        {
+            foreach(var name in SaveManager.instance.data.NPCNames)
+            {
+                Debug.Log(name + " is found");
+                if (name == NPCDIalogueChecker.NPCName)
+                {
+                    Player.current.DialogueIsDone = true;
+                }
+            }
+        }
+        
+        if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
             stopper.SetActive(false);
             if (SaveManager.instance.FirstMissionComplete)
