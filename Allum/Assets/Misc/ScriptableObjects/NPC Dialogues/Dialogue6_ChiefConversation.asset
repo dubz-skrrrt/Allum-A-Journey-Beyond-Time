@@ -12,5 +12,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
   m_Name: Dialogue6_ChiefConversation
   m_EditorClassIdentifier: 
-  characterName: 
-  lines: []
+  characterName: Chief
+  lines:
+  - characterName: Francisco
+    text: Hello sir, are you the chief of this village?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Chief
+    text: Yes! So what brings you here?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: "I\u2019m here to ask if this newspaper was issued today. The kid who brought
+      me here didn\u2019t know how to read.\r\n"
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Chief
+    text: Oh Perla. Yes, most of us here don't know how to read, due to lack of education
+      and poverty. Fortunately, I know some words and numbers.
+    hasChoices: 1
+    choices:
+      choice1: Is life hard here?
+      response1:
+        text: 'For the most part, yes but we persevere any way we can. '
+      choice2: This... it has been hard huh?
+      response2:
+        text: Yes it has. We get support from time to time.
+  - characterName: Francisco
+    text: I see...
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Chief
+    text: "Well, let me take a look at the date of the newspaper then\u2026\r\n"
+    hasChoices: 1
+    choices:
+      choice1: Here it is.
+      response1:
+        text: (Reaches out)
+      choice2: Here you go.
+      response2:
+        text: (Reaches out)
+  - characterName: Chief
+    text: From what I can understand, it is issued today.
+    hasChoices: 1
+    choices:
+      choice1: (I really time traveled to the past).
+      response1:
+        text: Well did you get your answer?
+      choice2: (I really went back in time).
+      response2:
+        text: So did I help you answer your question?
+  - characterName: Francisco
+    text: "Well thank you. Oh and by the way, you have mentioned that most of you
+      don\u2019t know how to read right? I think I can help you with that. Consider
+      this as my way of thanking you for welcoming me to your village.\r\n"
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Chief
+    text: "Oh really! Thanks! You are also welcome to stay in our village for as
+      long as you\u2019d like.\r\n"
+    hasChoices: 1
+    choices:
+      choice1: "Well, I\u2019ll look around the village. Thanks again for your hospitality."
+      response1:
+        text: No problem.
+      choice2: "I\u2019ll get going now. Thank you too."
+      response2:
+        text: See you around.

@@ -1683,6 +1683,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1961782825636194211, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
+--- !u!1 &1531513597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635965464096876349, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
+  m_PrefabInstance: {fileID: 1531513596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531513598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531513597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d440242b983d5a54a951dba54a217812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueSceneDone: 0
+  player: {fileID: 1008053701}
+  posX: -6.95
+  posY: 0.05
+  previous: ChiefRoom
 --- !u!1 &1540342981
 GameObject:
   m_ObjectHideFlags: 0
