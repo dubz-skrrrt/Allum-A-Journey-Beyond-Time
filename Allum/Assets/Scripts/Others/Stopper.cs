@@ -25,6 +25,11 @@ public class Stopper : MonoBehaviour
             }
         }
         
+        if (SaveManager.instance.FirstMissionComplete)
+        {
+            this.gameObject.SetActive(true);
+        }
+        
         if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
             stopper.SetActive(false);

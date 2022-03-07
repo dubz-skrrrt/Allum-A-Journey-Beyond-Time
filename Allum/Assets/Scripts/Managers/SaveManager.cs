@@ -130,16 +130,16 @@ public class SaveManager : MonoBehaviour
     {
         data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
         sceneNum = data.SceneIndex;
-        foreach (string NPCname in data.NPCNames)
-        {
-            Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
-            if (NPCDIalogueChecker.NPCName == NPCname)
-            {
-                Debug.Log("thisDone");
-                NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
+        // foreach (string NPCname in data.NPCNames)
+        // {
+        //     Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
+        //     if (NPCDIalogueChecker.NPCName == NPCname)
+        //     {
+        //         Debug.Log("thisDone");
+        //         NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
                 
-            }
-        }
+        //     }
+        // }
         sceneName = data.SceneName;
         canWalk = data.wakingup;
         TimePiece.timepieceAppear = data.timePieceOn;

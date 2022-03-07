@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject choice1Button;
     public GameObject choice2Button;
+    public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
     [SerializeField] bool keyDown;
@@ -65,8 +66,12 @@ public class DialogueTrigger : MonoBehaviour
             }
             if (textDisplay.text == dialogue.lines[index].text && !dialogue.lines[index].hasChoices)
             {
-                isRespondingDone = true;
-                isConversing = false;
+                continueButton.SetActive(true);
+                if (continueButton.activeSelf)
+                {
+                    isRespondingDone = true;
+                    isResponding = false;
+                }
             }
             
         }
@@ -74,14 +79,23 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (textDisplay.text == dialogue.lines[index].choices.response1.text)
             {
-                isRespondingDone = true;
-                isResponding = false;
+                continueButton.SetActive(true);
+                if (continueButton.activeSelf)
+                {
+                    isRespondingDone = true;
+                    isResponding = false;
+                }
                 
             }
             else if (textDisplay.text == dialogue.lines[index].choices.response2.text)
             {
-                isRespondingDone = true;
-                isResponding = false;
+                continueButton.SetActive(true);
+                if (continueButton.activeSelf)
+                {
+                    isRespondingDone = true;
+                    isResponding = false;
+                }
+                
             }
             
         }
@@ -209,7 +223,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         choice1Button.SetActive(false);
         choice2Button.SetActive(false);
-        
+        continueButton.SetActive(false);
         if (index < dialogue.lines.Length - 1)
         {
             index++;
@@ -221,6 +235,7 @@ public class DialogueTrigger : MonoBehaviour
             textDisplay.text = "";
             choice1Button.SetActive(false);
             choice2Button.SetActive(false);
+            continueButton.SetActive(false);
             index++;
         }
 

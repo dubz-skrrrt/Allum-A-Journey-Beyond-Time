@@ -8,6 +8,7 @@ public class ItemDialogueTrigger : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     public ScriptableDialogue dialogue;
     public GameObject dialogueBox;
+    public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
     public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece;
@@ -42,23 +43,33 @@ public class ItemDialogueTrigger : MonoBehaviour
         {
             if (textDisplay.text == dialogue.lines[index].text && !dialogue.lines[index].hasChoices)
             {
+                continueButton.SetActive(true);
                 if (timetravelPiece)
                 {
                     if (index == 2)
                     {
                         CameraShake.instance.ShakeCamera(3f, 2f);
                         FrameSwitchingSystem.pastTime = true;
-
-                        isRespondingDone = true;
-                        isConversing = false;
+                        if (continueButton.activeSelf)
+                        {
+                            isRespondingDone = true;
+                            isConversing = false;
+                        }
+                        
                     }
-                    isRespondingDone = true;
-                    isConversing = false;
+                     if (continueButton.activeSelf)
+                        {
+                            isRespondingDone = true;
+                            isConversing = false;
+                        }
                 }
                 else
                 {
-                    isRespondingDone = true;
-                    isConversing = false;
+                     if (continueButton.activeSelf)
+                        {
+                            isRespondingDone = true;
+                            isConversing = false;
+                        }
                 }
                 
             }
@@ -115,6 +126,7 @@ public class ItemDialogueTrigger : MonoBehaviour
 
     public void NextDialogue()
     {
+        continueButton.SetActive(false);
         if (index < dialogue.lines.Length - 1)
         {
             index++;
@@ -123,6 +135,7 @@ public class ItemDialogueTrigger : MonoBehaviour
             isConversing = true;
         }else
         {
+            continueButton.SetActive(false);
             textDisplay.text = "";
             index++;
         }

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue3_Self
+  m_EditorClassIdentifier: 
+  characterName: (Francisco)
+  lines:
+  - characterName: (Francisco)
+    text: "What the?! Where\u2019s the apartment?! What happened to the buildings?
+      What is going on?"
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: (Francisco)
+    text: "There's people over there\u2026 I haven\u2019t seen them here before though."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: (Francisco)
+    text: "I\u2019ll go over and ask what happened."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 

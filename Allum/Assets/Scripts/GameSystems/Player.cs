@@ -22,14 +22,12 @@ public class Player : MonoBehaviour
         // {
         //     SaveManager.instance.sceneSwitchSave = false;
         // }
-        // if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !SaveManager.instance.sceneSwitchSave)
-        // {
-        //     Debug.Log("SaveFirst");
+        if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !SaveManager.instance.sceneSwitchSave)
+        {
+            Debug.Log("SaveFirst");
             
-        //     SaveManager.instance.LoadPlayerMissionData();
-        //     SaveManager.instance.SceneSwitchData();
-        //     SaveManager.instance.SavePlayer();
-        // }
+            SaveManager.instance.LoadPlayerMissionData();
+        }
     }
     private void Update()
     {

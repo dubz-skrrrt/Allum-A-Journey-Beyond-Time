@@ -9,6 +9,11 @@ public class TimePiece : MonoBehaviour
 
     private void Update()
     {
+        if (isPast)
+        {
+            Debug.Log("check");
+            this.gameObject.SetActive(true);
+        }
         if (SaveManager.instance.FirstMissionComplete)
         {
             isPast = true;
@@ -22,11 +27,6 @@ public class TimePiece : MonoBehaviour
                 isPast = false;
                 this.gameObject.SetActive(false);
                 return;
-            }
-
-            if (isPast)
-            {
-                this.gameObject.SetActive(true);
             }
         }
         else

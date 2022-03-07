@@ -2571,6 +2571,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2838334532009737821, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3263916850676337002, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2757,6 +2761,11 @@ MonoBehaviour:
 --- !u!1 &1304959758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3263916850676337003, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
+  m_PrefabInstance: {fileID: 1304959748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1304959759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838334532009737821, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
   m_PrefabInstance: {fileID: 1304959748}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1322395277
@@ -3911,6 +3920,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 1304959758}
   choice1Button: {fileID: 1304959755}
   choice2Button: {fileID: 1304959753}
+  continueButton: {fileID: 1304959759}
   interactionSystem: {fileID: 0}
   player: {fileID: 0}
   keyDown: 0
@@ -3963,7 +3973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668d283e28560c944826bfd961452b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCName: PostMan
 --- !u!1 &1900727644
 GameObject:
   m_ObjectHideFlags: 0
