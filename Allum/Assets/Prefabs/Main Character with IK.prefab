@@ -867,6 +867,7 @@ MonoBehaviour:
   thoughtBubble: {fileID: 21300000, guid: b830cc2d0be163b45b3a4d3ad8fc24c5, type: 3}
   thoughtBubbleEye: {fileID: 21300000, guid: c3fd9b21e1812ac4c9b9d1ff7b3b896a, type: 3}
   thoughtBubbleDoor: {fileID: 21300000, guid: 4e0fa2df0b419b74a9ca3075f25c3a7d, type: 3}
+  thoughtBubbleWalk: {fileID: 21300000, guid: a0daad759faf13d48a0a1076fe0d3f87, type: 3}
   NPCDialogue: {fileID: 0}
   detectionLayer:
     serializedVersion: 2
@@ -889,6 +890,7 @@ MonoBehaviour:
   MovementSpeed: 3
   isFacingRight: 1
   movementDisabled: 0
+  DialogueIsDone: 0
 --- !u!95 &6125009629710066766
 Animator:
   serializedVersion: 3

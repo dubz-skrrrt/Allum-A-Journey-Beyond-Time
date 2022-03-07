@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue5_BadjaoKidConvo2
+  m_EditorClassIdentifier: 
+  characterName: Kid
+  lines:
+  - characterName: Francisco
+    text: Hey kiddo! Wait for a second!
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: My name's not kiddo, it's Perla!
+    hasChoices: 1
+    choices:
+      choice1: Perlah? Land lady?
+      response1:
+        text: Land Lady? You are really crazy. Haha!
+      choice2: Perlah? No way!
+      response2:
+        text: 'Yes way! '
+  - characterName: Kid
+    text: Well mister, how about yours? What's your name?
+    hasChoices: 1
+    choices:
+      choice1: Umm, Frank...
+      response1:
+        text: Frank... What a weird name. Haha!
+      choice2: Uhh, Frank! yes, my name's Frank.
+      response2:
+        text: Frank... My name still sounds better. Haha!
+  - characterName: Francisco
+    text: Anways kid - Perla, is this newspaper issued today?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: Hmm... I can't read. I'll take you to the "Chief", maybe he knows something
+      about.
+    hasChoices: 1
+    choices:
+      choice1: 'Chief? '
+      response1:
+        text: Yeah! Our village chief.
+      choice2: Chief? Like a leader?
+      response2:
+        text: Yeah, you can say that.
+  - characterName: Kid
+    text: Well, let's go!
+    hasChoices: 1
+    choices:
+      choice1: OK, sure!
+      response1:
+        text: The village is just right up ahead.
+      choice2: Alright, I'll follow.
+      response2:
+        text: Don't get lost.

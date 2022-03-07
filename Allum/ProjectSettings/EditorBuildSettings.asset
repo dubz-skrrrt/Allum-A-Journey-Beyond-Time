@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CoastalRoad.unity
     guid: 1105c2d752d6c4549be0e00301cf9502
+  - enabled: 1
+    path: Assets/Scenes/BadjaoCommunity.unity
+    guid: 299e3782d2c581e49af29530267cfdac
   m_configObjects: {}

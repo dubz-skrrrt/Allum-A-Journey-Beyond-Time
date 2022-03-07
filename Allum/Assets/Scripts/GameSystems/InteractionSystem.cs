@@ -9,6 +9,7 @@ public class InteractionSystem : MonoBehaviour
     public Sprite thoughtBubble;
     public Sprite thoughtBubbleEye;
     public Sprite thoughtBubbleDoor;
+    public Sprite thoughtBubbleWalk;
     public GameObject NPCDialogue;
     private const float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
@@ -75,6 +76,11 @@ public class InteractionSystem : MonoBehaviour
             NPCDialogue = other.gameObject;
             interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubbleDoor;
             isDoor = true;
+        }
+         if (other.gameObject.layer == 11)
+        {
+            NPCDialogue = other.gameObject;
+            interactablePrompt.GetComponent<SpriteRenderer>().sprite = thoughtBubbleWalk;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
