@@ -4695,7 +4695,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   index: 0
-  typingSpeed: 0
+  typingSpeed: 0.02
 --- !u!114 &739329869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6793,7 +6793,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 1
   index: 0
-  typingSpeed: 0
+  typingSpeed: 0.02
 --- !u!61 &1055112713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8988,7 +8988,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   index: 0
-  typingSpeed: 0
+  typingSpeed: 0.02
 --- !u!1 &1270247068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3263916850676337003, guid: 1dffea0ff08675a49a9c7af31b7e3d8c, type: 3}
@@ -9941,7 +9941,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   index: 0
-  typingSpeed: 0
+  typingSpeed: 0.02
 --- !u!1 &1384554037
 GameObject:
   m_ObjectHideFlags: 0
@@ -11253,7 +11253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626071520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.628597, y: 0.92418265, z: -10}
+  m_LocalPosition: {x: -0.13454151, y: 1.2029786, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
