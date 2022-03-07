@@ -538,6 +538,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 1
   index: 0
   typingSpeed: 0.02
 --- !u!61 &443282845
@@ -1626,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9217502322553741924, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
       propertyPath: posX
-      value: 9.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 9217502322553741924, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
       propertyPath: posY

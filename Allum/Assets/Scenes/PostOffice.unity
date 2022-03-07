@@ -2330,6 +2330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
+      propertyPath: canWalk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2653426066521733173, guid: 6403041268c36344a81fe858ad725334, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3932,7 +3936,8 @@ MonoBehaviour:
   isResponding: 0
   isRespondingDone: 0
   textDisplayDone: 0
-  choiceIndex: 1
+  isGoing: 0
+  choiceIndex: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1820788149

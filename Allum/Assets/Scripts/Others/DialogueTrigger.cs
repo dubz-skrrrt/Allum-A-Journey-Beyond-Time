@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, newsPaper;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -84,26 +84,6 @@ public class DialogueTrigger : MonoBehaviour
                     isRespondingDone = true;
                     isResponding = false;
                 }
-                if (newsPaper)
-                {
-                    if (index == 3)
-                    {
-                        TogglePopUpImage.show = true;
-                    }
-                    if (continueButton.activeSelf)
-                    {
-                        isRespondingDone = true;
-                        isConversing = false;
-                    }
-                }
-                else
-                {
-                     if (continueButton.activeSelf)
-                        {
-                            isRespondingDone = true;
-                            isConversing = false;
-                        }
-                }
             }
         }
 
@@ -114,15 +94,22 @@ public class DialogueTrigger : MonoBehaviour
         }
         if (isGoing && this.transform.position.x < -9.5f)
         {
+            Debug.Log("Stillwalking");
+            transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
             walkedAway = true; 
-        }
-        if (isGoing && walkedAway)
-        {
             if (this.gameObject.activeSelf)
             {
                 SaveManager.instance.SavePlayer();
             }
+        }
+        if (isGoing && walkedAway)
+        {
             this.gameObject.SetActive(false);
+            if (this.gameObject.activeSelf)
+            {
+                SaveManager.instance.SavePlayer();
+            }
+            
             
         }
         if (isResponding)

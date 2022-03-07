@@ -470,6 +470,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 1
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &80034982
@@ -2291,6 +2292,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &266991151
@@ -5040,6 +5042,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &739329869
@@ -7200,6 +7203,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 1
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1055112713
@@ -7556,6 +7560,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1898725414}
     m_Modifications:
+    - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: index
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: choice1Text
       value: 
@@ -9120,6 +9128,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1270247068 stripped
@@ -9383,6 +9392,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &1283004817
@@ -10080,6 +10090,7 @@ MonoBehaviour:
   inDialogue: 0
   timetravelPiece: 0
   discriminationScene: 0
+  newsPaper: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1384554037
@@ -14975,6 +14986,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSceneDone: 0
   player: {fileID: 150645538}
-  posX: -8.51
+  posX: -8
   posY: -3.7
   previous: CoastalRoad

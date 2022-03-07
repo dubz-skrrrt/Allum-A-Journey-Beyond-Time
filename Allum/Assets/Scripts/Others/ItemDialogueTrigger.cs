@@ -11,7 +11,7 @@ public class ItemDialogueTrigger : MonoBehaviour
     public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
-    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene;
+    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene, newsPaper;
     public int index;
     public float typingSpeed;
     public static bool dialogueFinished, onCollide;
@@ -64,7 +64,26 @@ public class ItemDialogueTrigger : MonoBehaviour
                             isConversing = false;
                         }
                 }
-                
+                if (newsPaper)
+                {
+                    if (index == 3)
+                    {
+                        Debug.Log("Checking");
+                        TogglePopUpImage.show = true;
+                    }
+                    if (continueButton.activeSelf)
+                    {
+                        isRespondingDone = true;
+                        isConversing = false;
+                    }
+                }
+
+                if (continueButton.activeSelf)
+                {
+                    
+                    isRespondingDone = true;
+                    isConversing = false;
+                }
             }
         }
 
@@ -107,7 +126,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                 }
             }
         }
-        if (SceneFader.faded)
+        if (SceneFader.faded && discriminationScene)
         {
             this.gameObject.SetActive(false);
         }
