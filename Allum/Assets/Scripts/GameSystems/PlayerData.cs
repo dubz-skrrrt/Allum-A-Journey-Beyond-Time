@@ -16,6 +16,8 @@ public class PlayerData
    public bool firstMission;
    public bool pastFrames;
    public bool timePieceOn;
+   public bool fade;
+   public bool walkingAway;
    public List<string> NPCNames;
    public PlayerData (Player player)
    {
@@ -23,11 +25,13 @@ public class PlayerData
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
       firstMission = SaveManager.instance.FirstMissionComplete;
+      walkingAway = DialogueTrigger.walkedAway;
       timePieceOn = TimePiece.timepieceAppear;
       pastFrames = FrameSwitchingSystem.pastTime;
       dialogueDone = NPCDIalogueChecker.NPCDialogueDone;
       wakingup = SaveManager.instance.canWalk;
       SceneIndex = SaveManager.instance.sceneNum;
+      fade = SceneFader.faded;
       SceneName = SaveManager.instance.sceneName;
       position = new float[]
       {

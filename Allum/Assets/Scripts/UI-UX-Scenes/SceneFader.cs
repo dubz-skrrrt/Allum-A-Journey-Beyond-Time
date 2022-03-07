@@ -9,6 +9,7 @@ public class SceneFader : MonoBehaviour
     public Image image;
     public AnimationCurve fadeCurve;
     public static bool unmovable;
+    public static bool faded;
     void Awake()
     {
         instance = this;
@@ -26,7 +27,12 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeOut(Scene));
         
     }
-    IEnumerator FadeIn ()
+
+    // public void FadeEffect()
+    // {
+    //     StartCoroutine(FadeOutFX);
+    // }
+    public IEnumerator FadeIn ()
     {
         float t = 1f;
         
@@ -55,5 +61,31 @@ public class SceneFader : MonoBehaviour
          Loader.load(_Scene);
     }
     
-    
+    public IEnumerator FadeOutFX ()
+    {
+        float t = 0f;
+         while (t < 1f)
+         {
+             t += Time.deltaTime * 0.5f;
+             float a = fadeCurve.Evaluate(t);
+             image.color = new Color (0f, 0f ,0f, a);
+             yield return 0;
+             StartCoroutine(FadeIn());
+             faded = true;
+         }
+    }
+    public IEnumerator FadeInFX ()
+    {
+        float t = 1f;
+        
+         while (t > 0f)
+         {
+             t -= Time.deltaTime * 0.5f;
+             float a = fadeCurve.Evaluate(t);
+             image.color = new Color (0f, 0f ,0f, a);
+             yield return 0;
+             
+         }
+         
+    }
 }

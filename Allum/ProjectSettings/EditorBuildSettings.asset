@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PostOffice.unity
     guid: c7eeb9ec0c49b80479fe1eeddc25c451
+  - enabled: 1
+    path: Assets/Scenes/CoastalRoad.unity
+    guid: 1105c2d752d6c4549be0e00301cf9502
   m_configObjects: {}

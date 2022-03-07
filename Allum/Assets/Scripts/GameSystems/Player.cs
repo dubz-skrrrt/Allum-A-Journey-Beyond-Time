@@ -61,6 +61,10 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+        if (movementDisabled)
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 
     public void Flip()

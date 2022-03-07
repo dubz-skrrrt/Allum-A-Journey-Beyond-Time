@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue4_BadjaoKidConvo
+  m_EditorClassIdentifier: 
+  characterName: Kid
+  lines:
+  - characterName: Francisco
+    text: Hey kid... are you alright?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: Mhm... It's fine I experience those sometimes. Um, thank you.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: No problem kiddo... By the way, what happened here?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: Huh? What do you mean "what happened"? Everything is fine.
+    hasChoices: 1
+    choices:
+      choice1: ("Everything is fine"?)
+      response1:
+        text: Mister?
+      choice2: What?!
+      response2:
+        text: Mister?!
+  - characterName: Francisco
+    text: Uhh, my apartment, it's all gone. Did the earthquake cause this?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: Apartment? Earthquake? Hey mister, are you crazy or what?
+    hasChoices: 1
+    choices:
+      choice1: 'Maybe I am starting to be crazy... (muttering to self). '
+      response1:
+        text: What?
+      choice2: I don't know
+      response2:
+        text: (What a weirdo).
+  - characterName: Francisco
+    text: (Looks at the empty cup).... What are you doing with that cup?
+    hasChoices: 0
+    choices:
+      choice1: 'Maybe I am starting to be crazy... (muttering to self). '
+      response1:
+        text: What?
+      choice2: I don't know
+      response2:
+        text: (What a weirdo).
+  - characterName: Kid
+    text: "Oh this? I\u2019m asking for alms. You know, we\u2019re very poor and
+      my father\u2019s fishing is    not enough for us so I have to find other ways
+      to sustain our needs."
+    hasChoices: 0
+    choices:
+      choice1: 'Maybe I am starting to be crazy... (muttering to self). '
+      response1:
+        text: What?
+      choice2: I don't know
+      response2:
+        text: (What a weirdo).
+  - characterName: Francisco
+    text: "(Why\u2019s a kid begging for money? She should be in school learning
+      right now?!)\r\n."
+    hasChoices: 0
+    choices:
+      choice1: 'Maybe I am starting to be crazy... (muttering to self). '
+      response1:
+        text: What?
+      choice2: I don't know
+      response2:
+        text: (What a weirdo).
+  - characterName: Kid
+    text: 'Hey mister, do you have any spare change you can give me?
+
+'
+    hasChoices: 1
+    choices:
+      choice1: 'Hmmm.. I have some coins in my pocket. Here you go '
+      response1:
+        text: Thank you mister.
+      choice2: "Sorry, I don\u2019t have anything on me right now. (I left it in
+        my apartment *sighs*). "
+      response2:
+        text: Oh well, too bad.
+  - characterName: Kid
+    text: 'I guess I''ll be going now. '
+    hasChoices: 1
+    choices:
+      choice1: 'Hey! Wait a second kid! '
+      response1:
+        text: ....
+      choice2: Hey! I have more questions
+      response2:
+        text: ....

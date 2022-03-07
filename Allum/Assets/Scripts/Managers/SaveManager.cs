@@ -107,7 +107,8 @@ public class SaveManager : MonoBehaviour
                 NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
             }
         }
-        
+        SceneFader.faded = data.fade;
+        DialogueTrigger.walkedAway = data.walkingAway;
         TimePiece.timepieceAppear = data.timePieceOn;
         canWalk = data.wakingup;
         FrameSwitchingSystem.pastTime = data.pastFrames;
@@ -140,6 +141,8 @@ public class SaveManager : MonoBehaviour
                 
         //     }
         // }
+        DialogueTrigger.walkedAway = data.walkingAway;
+        SceneFader.faded = data.fade;
         sceneName = data.SceneName;
         canWalk = data.wakingup;
         TimePiece.timepieceAppear = data.timePieceOn;

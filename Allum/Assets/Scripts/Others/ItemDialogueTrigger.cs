@@ -11,7 +11,7 @@ public class ItemDialogueTrigger : MonoBehaviour
     public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
-    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece;
+    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene;
     public int index;
     public float typingSpeed;
     public static bool dialogueFinished, onCollide;
@@ -59,14 +59,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                     }
                      if (continueButton.activeSelf)
                         {
-                            isRespondingDone = true;
-                            isConversing = false;
-                        }
-                }
-                else
-                {
-                     if (continueButton.activeSelf)
-                        {
+                            
                             isRespondingDone = true;
                             isConversing = false;
                         }
@@ -102,9 +95,21 @@ public class ItemDialogueTrigger : MonoBehaviour
                         interactionSystem.isCreated = false;
                         dialogueFinished = true;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
+                        TogglePopUpImage.show = false;
+                        if (discriminationScene)
+                        {
+                            StartCoroutine(SceneFader.instance.FadeOutFX());
+                                          
+                        }
+
+
                     }
                 }
             }
+        }
+        if (SceneFader.faded)
+        {
+            this.gameObject.SetActive(false);
         }
     }
 
