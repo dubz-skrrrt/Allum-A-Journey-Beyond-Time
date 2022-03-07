@@ -118,9 +118,11 @@ public class ItemDialogueTrigger : MonoBehaviour
                         if (discriminationScene)
                         {
                             StartCoroutine(SceneFader.instance.FadeOutFX());
-                                          
                         }
-
+                        if (newsPaper)
+                        {
+                            this.gameObject.SetActive(false);
+                        }
 
                     }
                 }
