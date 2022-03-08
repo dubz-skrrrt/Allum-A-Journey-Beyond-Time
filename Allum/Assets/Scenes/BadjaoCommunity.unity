@@ -2487,7 +2487,7 @@ MonoBehaviour:
   textDisplayDone: 0
   isGoing: 0
   mailStart: 0
-  startVid: 0
+  startVid: 1
   choiceIndex: 0
   index: 0
   typingSpeed: 0.02
