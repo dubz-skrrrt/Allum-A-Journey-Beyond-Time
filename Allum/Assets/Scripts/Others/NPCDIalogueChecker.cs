@@ -11,20 +11,32 @@ public class NPCDIalogueChecker : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        NPCName = this.gameObject.name;
     }
 
     private void Start()
     {
-        //NPCName = this.gameObject.name;
+        NPCName = this.gameObject.name;
     }
     private void Update()
     {
         Debug.Log(NPCDialogueDone);
-        if (Player.current.DialogueIsDone)
+        if (Player.current.DialogueIsDone && !NPCDialogueDone)
         {
             NPCDialogueDone = true;
+            SaveManager.instance.NPCs.Add(NPCName);
             Debug.Log("saved to list");
+        }
+
+        foreach (string NPCnames in SaveManager.instance.NPCs)
+        {
+            if (NPCName == NPCnames)
+            {
+                NPCDialogueDone = true;
+                if (NPCDialogueDone)
+                {
+                    Player.current.DialogueIsDone = true;
+                }
+            }
         }
     }
 }

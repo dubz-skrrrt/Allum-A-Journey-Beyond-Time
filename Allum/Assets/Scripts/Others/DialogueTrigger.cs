@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -186,6 +186,10 @@ public class DialogueTrigger : MonoBehaviour
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
                         player.DialogueIsDone = true;
                         index = dialogue.lines.Length-1;
+                        if (mailStart)
+                        {
+                            SaveManager.instance.SavePlayer();
+                        }
                     }
                 }
                 

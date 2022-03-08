@@ -19,7 +19,7 @@ public class PlayerData
    public bool timePieceOn;
    public bool fade;
    public bool walkingAway;
-   public List<string> NPCNames;
+   public List<string> NPCNames = new List<string>();
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
@@ -44,7 +44,10 @@ public class PlayerData
       {
          scale.x, scale.y, scale.z
       };
-      NPCNames = new List<string>();
-      NPCNames.Add(NPCDIalogueChecker.NPCName);
+      foreach(string npc in SaveManager.instance.NPCs)
+      {
+         NPCNames.Add(npc);
+      }
+      
    }
 }

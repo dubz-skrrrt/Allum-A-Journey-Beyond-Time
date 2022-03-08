@@ -10,7 +10,17 @@ public class Stopper : MonoBehaviour
     {
         if (stopper == null)
             stopper = null;
+
+        if (NPCDIalogueChecker.NPCDialogueDone)
+        {
+            stopper.SetActive(false);
+        }
+        else
+        {
+            stopper.SetActive(true);
+        }
     }
+    
     private void Update()
     {
         if (NPCDIalogueChecker.NPCDialogueDone)

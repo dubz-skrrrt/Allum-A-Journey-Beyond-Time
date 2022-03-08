@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
       propertyPath: NPCs.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
       propertyPath: NPCs.Array.data[0]
@@ -11461,7 +11461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626071520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13454151, y: 1.2029786, z: -10}
+  m_LocalPosition: {x: 53.102604, y: 2.4083056, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

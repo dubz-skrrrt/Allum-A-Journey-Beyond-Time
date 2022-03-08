@@ -8,7 +8,7 @@ public class SaveManager : MonoBehaviour
     public static SaveManager instance;
     [SerializeField] Player player;
     public PlayerData data;
-    //public List<string> NPCs = new List<string>();
+    public List<string> NPCs = new List<string>();
     public int sceneNum;
     public string sceneName;
     public bool sceneSwitchSave;
@@ -98,7 +98,7 @@ public class SaveManager : MonoBehaviour
         sceneNum = data.SceneIndex;
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
-        
+        NPCs = data.NPCNames;
         foreach (string NPCname in data.NPCNames)
         {
             Debug.Log("Loaded" + NPCname);
@@ -106,6 +106,10 @@ public class SaveManager : MonoBehaviour
             {
                 Debug.Log("thisDone" + " " + NPCname);
                 NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
+                if (NPCDIalogueChecker.NPCDialogueDone)
+                {
+                    player.DialogueIsDone = true;
+                }
             }
         }
         SceneFader.faded = data.fade;
@@ -133,16 +137,20 @@ public class SaveManager : MonoBehaviour
     {
         data = SaveSystem.LoadGameState(SaveSlotData.SlotName);
         sceneNum = data.SceneIndex;
-        // foreach (string NPCname in data.NPCNames)
-        // {
-        //     Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
-        //     if (NPCDIalogueChecker.NPCName == NPCname)
-        //     {
-        //         Debug.Log("thisDone");
-        //         NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
-                
-        //     }
-        // }
+        NPCs = data.NPCNames;
+        foreach (string NPCname in data.NPCNames)
+        {
+            Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
+            if (NPCDIalogueChecker.NPCName == NPCname)
+            {
+                Debug.Log("thisDone");
+                NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
+                if (NPCDIalogueChecker.NPCDialogueDone)
+                {
+                    player.DialogueIsDone = true;
+                }
+            }
+        }
         DialogueTrigger.walkedAway = data.walkingAway;
         SceneFader.faded = data.fade;
         sceneName = data.SceneName;

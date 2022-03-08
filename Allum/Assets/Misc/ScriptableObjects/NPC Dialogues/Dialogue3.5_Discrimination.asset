@@ -34,3 +34,43 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
+  - characterName: Stranger
+    text: What do you mean "sorry"? Do you know how expensive these shoes are?!
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Stranger
+    text: You street rats are so dirty!
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: Hey! That's enough from you! She's just a child.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: 'Stranger '
+    text: Tsk! I'm out of here.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 

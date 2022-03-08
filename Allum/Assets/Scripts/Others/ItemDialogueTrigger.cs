@@ -124,7 +124,6 @@ public class ItemDialogueTrigger : MonoBehaviour
                         }
                         if (newsPaper)
                         {
-
                             this.gameObject.SetActive(false);
                         }
 

@@ -35,7 +35,7 @@ MonoBehaviour:
       response2:
         text: No problem.
   - characterName: Kid
-    text: 'Sure, I''ll get going now. '
+    text: I'll get going now. See you around.
     hasChoices: 0
     choices:
       choice1: 
