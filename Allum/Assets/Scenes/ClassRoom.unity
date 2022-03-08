@@ -2005,7 +2005,7 @@ MonoBehaviour:
   textDisplay: {fileID: 1354048802}
   choice1Text: {fileID: 1354048801}
   choice2Text: {fileID: 1354048800}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: e9eb273a402f7564f81ecf19f78bf8ed, type: 2}
   dialogueBox: {fileID: 1354048799}
   choice1Button: {fileID: 1354048798}
   choice2Button: {fileID: 1354048798}
@@ -2027,6 +2027,32 @@ MonoBehaviour:
   choiceIndex: 0
   index: 0
   typingSpeed: 0.02
+--- !u!61 &1735301890
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735301887}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.7767982, y: 4.8325796}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.553596, y: 10.665159}
+  m_EdgeRadius: 0
 --- !u!1 &1742900326
 GameObject:
   m_ObjectHideFlags: 0
