@@ -15,13 +15,32 @@ MonoBehaviour:
   characterName: Kid
   lines:
   - characterName: Kid
-    text: Here is where the chief of the village lives. You can knock on the door
-      and ask for him.
+    text: 'Here is where the chief of the village lives. '
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Kid
+    text: You can come in whenever you like.
     hasChoices: 1
     choices:
       choice1: Thanks
       response1:
-        text: 'Sure, I''ll get going now. '
+        text: Your welcome.
       choice2: Thank you for taking me here.
       response2:
-        text: No problem. Gotta go now, see ya!
+        text: No problem.
+  - characterName: Kid
+    text: 'Sure, I''ll get going now. '
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 

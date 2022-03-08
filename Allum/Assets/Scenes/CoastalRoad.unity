@@ -884,6 +884,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ceda721ce558343aa0024e42ae2ff9, type: 3}
+--- !u!1 &792547528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4781405067150331613, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+  m_PrefabInstance: {fileID: 1485705049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &792547529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792547528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bccf502df2d8ec44ba028cdd1bd4162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
 --- !u!1 &857025843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1285,10 @@ PrefabInstance:
     - target: {fileID: 4781405067150331613, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: m_Name
       value: BadjaoKid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781405067150331613, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4939106229187783065, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: m_RootOrder

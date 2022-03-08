@@ -76,6 +76,10 @@ public class ItemDialogueTrigger : MonoBehaviour
                         isRespondingDone = true;
                         isConversing = false;
                     }
+                    if (index == 8)
+                    {
+                        TogglePopUpImage.show = false;
+                    }
                 }
 
                 if (continueButton.activeSelf)
@@ -114,13 +118,13 @@ public class ItemDialogueTrigger : MonoBehaviour
                         interactionSystem.isCreated = false;
                         dialogueFinished = true;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
-                        TogglePopUpImage.show = false;
                         if (discriminationScene)
                         {
                             StartCoroutine(SceneFader.instance.FadeOutFX());
                         }
                         if (newsPaper)
                         {
+
                             this.gameObject.SetActive(false);
                         }
 

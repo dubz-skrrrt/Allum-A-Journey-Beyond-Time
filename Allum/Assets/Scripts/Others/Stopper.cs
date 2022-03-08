@@ -37,6 +37,10 @@ public class Stopper : MonoBehaviour
             {
                 SaveManager.instance.SavePlayer();
             }
+            if (SaveManager.instance.SecondMissionStart)
+            {
+                SaveManager.instance.SavePlayer();
+            }
         }
         else
         {
@@ -63,13 +67,20 @@ public class Stopper : MonoBehaviour
             {
                 SaveManager.instance.FirstMissionComplete = false;
             }
-            
+            if (!SaveManager.instance.SecondMissionStart)
+            {
+                SaveManager.instance.SecondMissionStart = false;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+            if(SaveManager.instance.FirstMissionComplete)
+            {
+                SaveManager.instance.SecondMissionStart = true;
+            }
             SaveManager.instance.FirstMissionComplete = true;
         }
     }

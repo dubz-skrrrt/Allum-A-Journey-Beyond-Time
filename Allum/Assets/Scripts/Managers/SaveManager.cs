@@ -16,6 +16,7 @@ public class SaveManager : MonoBehaviour
     public bool canWalk;
     public bool inMenu;
     public bool FirstMissionComplete;
+    public bool SecondMissionStart;
     private void Awake()
     {
         if (instance != null && instance != this)

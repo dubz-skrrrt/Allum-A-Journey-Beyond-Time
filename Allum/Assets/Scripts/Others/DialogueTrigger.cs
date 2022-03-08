@@ -78,29 +78,48 @@ public class DialogueTrigger : MonoBehaviour
             }
             if (textDisplay.text == dialogue.lines[index].text && !dialogue.lines[index].hasChoices)
             {
+                 if (isGoing)
+                {
+                    if (index >= dialogue.lines.Length -1)
+                    {
+                        Debug.Log("Going");
+                        Vector3 thisScale = transform.localScale;
+                        thisScale.x *= -1;
+                        transform.localScale = thisScale;
+                        
+                    }
+                }
                 continueButton.SetActive(true);
                 if (continueButton.activeSelf)
                 {
                     isRespondingDone = true;
                     isResponding = false;
                 }
+                isConversing = false;
             }
         }
 
         if (isGoing && index >= dialogue.lines.Length -1)
-        {
+        {Debug.Log("Stillwalking");
             this.GetComponent<Animator>().SetBool("isWalking", true);
             transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
         }
-        if (isGoing && this.transform.position.x < -9.5f)
+        if (isGoing && this.transform.position.x < -9.5f )
         {
-            Debug.Log("Stillwalking");
+            
             transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
-            walkedAway = true; 
+            if (dialogueFinished)
+            {
+                walkedAway = true; 
+            }
+            
             if (this.gameObject.activeSelf)
             {
                 SaveManager.instance.SavePlayer();
             }
+        }else
+        {
+            
         }
         if (isGoing && walkedAway)
         {
