@@ -14,6 +14,7 @@ public class PlayerData
    public bool dialogueDone;
    public string prevScene;
    public bool firstMission;
+   public bool secondMisson;
    public bool pastFrames;
    public bool timePieceOn;
    public bool fade;
@@ -25,6 +26,7 @@ public class PlayerData
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
       firstMission = SaveManager.instance.FirstMissionComplete;
+      secondMisson = SaveManager.instance.SecondMissionStart;
       walkingAway = DialogueTrigger.walkedAway;
       timePieceOn = TimePiece.timepieceAppear;
       pastFrames = FrameSwitchingSystem.pastTime;

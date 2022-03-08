@@ -114,6 +114,7 @@ public class SaveManager : MonoBehaviour
         canWalk = data.wakingup;
         FrameSwitchingSystem.pastTime = data.pastFrames;
         FirstMissionComplete = data.firstMission;
+        SecondMissionStart = data.secondMisson;
         //Character local scale
         Vector3 scale = player.transform.localScale;
         scale.x = data.facingRight[0];
@@ -148,6 +149,7 @@ public class SaveManager : MonoBehaviour
         canWalk = data.wakingup;
         TimePiece.timepieceAppear = data.timePieceOn;
         FirstMissionComplete = data.firstMission;
+        SecondMissionStart = data.secondMisson;
         FrameSwitchingSystem.pastTime = data.pastFrames;
     }
 }
