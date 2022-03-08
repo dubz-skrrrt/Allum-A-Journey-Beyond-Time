@@ -8,7 +8,7 @@ public class ParentBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (SaveManager.instance.SecondMissionStart && SaveManager.instance.FirstMissionComplete)
+        if (SaveManager.instance.SecondMissionStart && SaveManager.instance.FirstMissionComplete && showParent)
         {
             this.gameObject.SetActive(true);
         }

@@ -99,6 +99,7 @@ public class SaveManager : MonoBehaviour
         sceneName = data.SceneName;
         player.isFacingRight = data.isfacing;
         NPCs = data.NPCNames;
+        
         foreach (string NPCname in data.NPCNames)
         {
             Debug.Log("Loaded" + NPCname);
@@ -112,6 +113,7 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        ParentBehavior.showParent = data.parentShow;
         SceneFader.faded = data.fade;
         DialogueTrigger.walkedAway = data.walkingAway;
         TimePiece.timepieceAppear = data.timePieceOn;
@@ -151,6 +153,7 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        ParentBehavior.showParent = data.parentShow;
         DialogueTrigger.walkedAway = data.walkingAway;
         SceneFader.faded = data.fade;
         sceneName = data.SceneName;

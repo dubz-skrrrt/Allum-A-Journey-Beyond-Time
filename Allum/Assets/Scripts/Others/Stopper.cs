@@ -89,7 +89,9 @@ public class Stopper : MonoBehaviour
         {
             if(SaveManager.instance.FirstMissionComplete)
             {
+                ParentBehavior.showParent = true;
                 SaveManager.instance.SecondMissionStart = true;
+                
             }
             SaveManager.instance.FirstMissionComplete = true;
         }

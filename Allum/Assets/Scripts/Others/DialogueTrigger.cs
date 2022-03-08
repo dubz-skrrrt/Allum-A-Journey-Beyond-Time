@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -189,6 +189,11 @@ public class DialogueTrigger : MonoBehaviour
                         if (mailStart)
                         {
                             SaveManager.instance.SavePlayer();
+                        }
+                        if (startVid)
+                        {
+                            ParentBehavior.showParent = false;
+                            VideoPlay.playVid = true;
                         }
                     }
                 }
