@@ -18,6 +18,13 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        if (PastFuture.change)
+        {
+            this.transform.position = new Vector3(33.05f, -2.87f, 0);
+            // Vector3 thisScale = this.transform.localScale;
+            // thisScale.x *= -1;
+            // isFacingRight = false;
+        }
         // if (SaveManager.instance.sceneSwitchSave)
         // {
         //     SaveManager.instance.sceneSwitchSave = false;

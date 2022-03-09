@@ -19,7 +19,8 @@ public class PlayerData
    public bool timePieceOn;
    public bool fade;
    public bool walkingAway;
-   public bool parentShow;
+   public bool parentShow, kidShow;
+   public bool changeTime;
    public List<string> NPCNames = new List<string>();
    public PlayerData (Player player)
    {
@@ -27,6 +28,8 @@ public class PlayerData
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
       parentShow = ParentBehavior.showParent;
+      kidShow = KidBehavior.showKid;
+      changeTime = PastFuture.change;
       firstMission = SaveManager.instance.FirstMissionComplete;
       secondMisson = SaveManager.instance.SecondMissionStart;
       walkingAway = DialogueTrigger.walkedAway;

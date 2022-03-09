@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - UICanvas
+  - watch
   layers:
   - Default
   - TransparentFX

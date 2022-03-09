@@ -100,3 +100,38 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
+  - characterName: Parents
+    text: How about the other children?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: I can continue teaching them basic education and also improving their practical
+      skills.
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Parents
+    text: "Oh that\u2019s nice to know that even if they are not in school, they
+      can still learn and improve new skills."
+    hasChoices: 1
+    choices:
+      choice1: This will let them have a better future.
+      response1:
+        text: "That\u2019s right! Youth is the hope of the future.We should also
+          do our part as parents."
+      choice2: These knowledge and skills will improve their lives in the future.
+      response2:
+        text: "For the future of our children. They will be the hope in improving
+          our tribe, and that\u2019s why we should also do our part in supporting
+          them.\r\n"

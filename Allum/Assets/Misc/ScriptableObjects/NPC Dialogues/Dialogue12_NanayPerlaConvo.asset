@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue12_NanayPerlaConvo
+  m_EditorClassIdentifier: 
+  characterName: 
+  lines:
+  - characterName: Francisco
+    text: Nanay Perlah! Are you okay?
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Nanay Perla
+    text: What are you talking about Hijo?
+    hasChoices: 1
+    choices:
+      choice1: The earthquake? What is going on Nanay?
+      response1:
+        text: Are you going crazy Francisco?
+      choice2: The earthquake... Didn't you feel it? What's happening?
+      response2:
+        text: Are you going crazy Francisco?
+  - characterName: Francisco
+    text: "I really don\u2019t know..."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: "Oh! By the way, here\u2019s the letter you asked me to get Nanay."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Nanay Perla
+    text: 'Oh thank you so much Hijo! '
+    hasChoices: 0
+    choices:
+      choice1: Here you go.
+      response1:
+        text: (Hands over the letter)
+      choice2: Here's the letter
+      response2:
+        text: (Hands over the letter)
+  - characterName: Nanay Perla
+    text: (Reads the letter then smiles).
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Nanay Perla
+    text: Can I ask you one last favor, dear?
+    hasChoices: 1
+    choices:
+      choice1: Hmmm, I was going to do something but if I can do it quickly then
+        sure.
+      response1:
+        text: "I\u2019m pretty sure you can do this fast"
+      choice2: Sure Nanay
+      response2:
+        text: "Oh, You\u2019re such a good man"
+  - characterName: Nanay Perla
+    text: This letter is actually for my grandson, he is still in the docks now.
+      Can you deliver it to him?
+    hasChoices: 1
+    choices:
+      choice1: Sure Nanay Perlah.
+      response1:
+        text: Thank you again! Just head left you'll be there in no time.
+      choice2: Alright, I can do that.
+      response2:
+        text: Good! Oh and by the way just head left you'll be there in no time.

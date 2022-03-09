@@ -113,6 +113,8 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        PastFuture.change = data.changeTime;
+        KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
         SceneFader.faded = data.fade;
         DialogueTrigger.walkedAway = data.walkingAway;
@@ -153,6 +155,8 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        PastFuture.change = data.changeTime;
+        KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
         DialogueTrigger.walkedAway = data.walkingAway;
         SceneFader.faded = data.fade;

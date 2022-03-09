@@ -19,7 +19,6 @@ public class NPCDIalogueChecker : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(NPCDialogueDone);
         if (Player.current.DialogueIsDone && !NPCDialogueDone)
         {
             NPCDialogueDone = true;

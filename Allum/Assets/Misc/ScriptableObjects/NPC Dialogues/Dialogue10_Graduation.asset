@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dc9615fec95c4daf87a54511563a5, type: 3}
+  m_Name: Dialogue10_Graduation
+  m_EditorClassIdentifier: 
+  characterName: 
+  lines:
+  - characterName: Francisco
+    text: "Wow, I\u2019m so proud of you! "
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Perla
+    text: "Thank you Mr. Frank. All of this would not be possible without your kind
+      help. You have made a big impact on me and my community. \r"
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: 'No Perlah, you had your efforts too. I was only here to guide you through
+      but it was your perseverance and dedication that led you to success. But I
+      appreciate that you acknowledge my help. '
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Perla
+    text: "Well, I have a gift for you, to thank you for all the things you\u2019ve
+      done for us."
+    hasChoices: 1
+    choices:
+      choice1: Oh, what is it?
+      response1:
+        text: Well, here you go! (hands over the gift).
+      choice2: "No, there\u2019s no need for you to give me something."
+      response2:
+        text: "Well, I believe you deserve something for everything you\u2019ve done
+          (hands over the gift)."
+  - characterName: Francisco
+    text: (Opens the gift)... This is!
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Perla
+    text: "Surprise!!! I\u2019ve always noticed you had a half broken pocket watch
+      with you. I went to the flea market the other day and found this, it looked
+      familiar at first then I remembered you had one, it seemed important to you
+      that\u2019s why I bought it."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: "I - I can\u2019t thank you enough."
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 
+  - characterName: Francisco
+    text: (Combine the two half broken watch)
+    hasChoices: 0
+    choices:
+      choice1: 
+      response1:
+        text: 
+      choice2: 
+      response2:
+        text: 

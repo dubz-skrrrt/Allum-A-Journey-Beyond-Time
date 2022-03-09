@@ -70,7 +70,7 @@ public class SceneFader : MonoBehaviour
              float a = fadeCurve.Evaluate(t);
              image.color = new Color (0f, 0f ,0f, a);
              yield return 0;
-             StartCoroutine(FadeIn());
+             StartCoroutine(FadeInFX());
              faded = true;
          }
     }

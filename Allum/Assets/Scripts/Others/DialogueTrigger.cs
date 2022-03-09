@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, encouraging;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -195,13 +195,20 @@ public class DialogueTrigger : MonoBehaviour
                             ParentBehavior.showParent = false;
                             VideoPlay.playVid = true;
                         }
+                        if (afterConsultation)
+                        {
+                            StartCoroutine(SceneFader.instance.FadeOutFX());
+                        }
                     }
                 }
                 
             }
-            
         }
-
+        if (SceneFader.faded && afterConsultation)
+        {
+            this.gameObject.SetActive(false);
+            KidBehavior.showKid = true;
+        }
         if (textDisplayDone)
         {
             if (Input.GetAxis("Horizontal") != 0)
