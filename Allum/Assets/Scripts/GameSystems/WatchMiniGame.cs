@@ -6,7 +6,7 @@ public class WatchMiniGame : MonoBehaviour
 {
     public GameObject halfRight;
     public GameObject halfLeft;
-    public GameObject trigger;
+    public GameObject panel;
     public bool combineWatch;
     public static WatchMiniGame instance;
 
@@ -20,18 +20,16 @@ public class WatchMiniGame : MonoBehaviour
     {
         if (combineWatch)
         {
-            halfLeft.SetActive(true);
-            halfRight.SetActive(true);
-            trigger.SetActive(true);
+            panel.SetActive(true);
+            
         }
         else
         {
-            halfLeft.SetActive(false);
-            halfRight.SetActive(false);
-            trigger.SetActive(false);
+            panel.SetActive(false);
+            
         }
 
-        if (halfLeft.activeSelf && halfRight.activeSelf)
+        if (panel.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

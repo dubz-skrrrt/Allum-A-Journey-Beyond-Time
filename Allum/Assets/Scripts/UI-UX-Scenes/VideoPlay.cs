@@ -6,6 +6,7 @@ public class VideoPlay : MonoBehaviour
 {
     public GameObject videoPanel;
     public VideoPlayer videoPlayer;
+    public string sceneName;
     public static bool playVid;
     // Update is called once per frame
     void Update()
@@ -17,7 +18,7 @@ public class VideoPlay : MonoBehaviour
             {
                 Debug.Log("Finished");
                 playVid = false;
-                Loader.load("ClassRoom");
+                Loader.load(sceneName);
             }
         }
         else

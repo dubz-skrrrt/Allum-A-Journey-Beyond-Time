@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, encouraging;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;

@@ -986,6 +986,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6052439652906192055, guid: 89d60cab06e335e469f59e50bd9aa1af, type: 3}
+      propertyPath: sceneName
+      value: BadjaoCommunity
+      objectReference: {fileID: 0}
     - target: {fileID: 6052439653679551999, guid: 89d60cab06e335e469f59e50bd9aa1af, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2597,6 +2601,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e9eb273a402f7564f81ecf19f78bf8ed, type: 2}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: startVid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: choice1Text
       value: 
       objectReference: {fileID: 1354048801}
@@ -2608,6 +2616,10 @@ PrefabInstance:
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 1354048799}
+    - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: encouraging
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: textDisplay
       value: 
