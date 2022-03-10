@@ -114,7 +114,7 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
-        
+        Player.teleport = data.teleport;
         PastFuture.change = data.changeTime;
         KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
@@ -157,6 +157,7 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        Player.teleport = data.teleport;
         PastFuture.change = data.changeTime;
         KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;

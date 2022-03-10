@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stopper : MonoBehaviour
 {
     public GameObject stopper;
+    [SerializeField] bool iskey;
     private void Awake()
     {
         if (stopper == null)
@@ -38,9 +39,10 @@ public class Stopper : MonoBehaviour
         {
             this.gameObject.SetActive(true);
         }
-        
+        Debug.Log(NPCDIalogueChecker.NPCDialogueDone);
         if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
+            Debug.Log("stop");
             stopper.SetActive(false);
             if (SaveManager.instance.FirstMissionComplete)
             {
@@ -53,18 +55,17 @@ public class Stopper : MonoBehaviour
         }
         else
         {
-            stopper.SetActive(true);
+            if (SaveManager.instance.keyFound && iskey)
+            {
+                SaveManager.instance.SavePlayer();
+                stopper.SetActive(false);
+            }
+            else
+            {
+                stopper.SetActive(true);
+            }
         }
 
-        if (SaveManager.instance.keyFound)
-        {
-            SaveManager.instance.SavePlayer();
-            stopper.SetActive(false);
-        }
-        else
-        {
-            stopper.SetActive(true);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

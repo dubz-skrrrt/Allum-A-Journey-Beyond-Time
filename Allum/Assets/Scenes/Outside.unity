@@ -637,6 +637,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 1
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &80034982
@@ -1332,6 +1334,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
+      propertyPath: data.changeTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
       propertyPath: NPCs.Array.data[0]
       value: landLady
       objectReference: {fileID: 0}
@@ -1448,6 +1454,9 @@ MonoBehaviour:
   mailStart: 0
   startVid: 0
   afterConsultation: 0
+  combine: 0
+  startVid2: 0
+  LastQuest: 0
   choiceIndex: 0
   index: 0
   typingSpeed: 0.02
@@ -2508,6 +2517,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &266991151
@@ -3726,11 +3737,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383265221}
-  - component: {fileID: 383265224}
   - component: {fileID: 383265223}
   - component: {fileID: 383265222}
+  - component: {fileID: 383265224}
   m_Layer: 9
-  m_Name: landLady
+  m_Name: landLadyFuture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3813,6 +3824,9 @@ MonoBehaviour:
   mailStart: 0
   startVid: 0
   afterConsultation: 0
+  combine: 0
+  startVid2: 0
+  LastQuest: 1
   choiceIndex: 0
   index: 0
   typingSpeed: 0.02
@@ -4730,6 +4744,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &498406827
@@ -6572,6 +6588,7 @@ Transform:
   - {fileID: 1832226681}
   - {fileID: 500387247}
   - {fileID: 498406825}
+  - {fileID: 820723007}
   m_Father: {fileID: 1764720078}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6816,6 +6833,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &739329869
@@ -6831,6 +6850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopper: {fileID: 1269855224}
+  iskey: 0
 --- !u!61 &739329870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7636,7 +7656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783540615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.688889, y: -1.6555603, z: 3.6234808}
+  m_LocalPosition: {x: -8.708889, y: -1.6355603, z: 3.6234808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 109575400}
@@ -7679,7 +7699,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 914676673}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.9
@@ -7986,6 +8006,109 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &820723006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820723007}
+  - component: {fileID: 820723010}
+  - component: {fileID: 820723009}
+  - component: {fileID: 820723008}
+  m_Layer: 0
+  m_Name: Stoppers1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820723007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820723006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.07, y: -1.86, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714952659}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820723008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820723006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1869ad57b22d42488f82a8e44314dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfSpeaker: {fileID: 14053946}
+  textDisplay: {fileID: 1042512699}
+  dialogue: {fileID: 11400000, guid: 122febb839399b546b5740ec7fc32fe0, type: 2}
+  dialogueBox: {fileID: 1270247068}
+  continueButton: {fileID: 302516687}
+  interactionSystem: {fileID: 0}
+  player: {fileID: 0}
+  isInteracting: 0
+  isConversing: 0
+  isRespondingDone: 0
+  inDialogue: 0
+  timetravelPiece: 0
+  discriminationScene: 0
+  newsPaper: 0
+  KeyFind: 0
+  fader: 0
+  index: 0
+  typingSpeed: 0.02
+--- !u!114 &820723009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820723006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886eb496136982d4da46da01f49a5ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopper: {fileID: 820723006}
+  iskey: 0
+--- !u!61 &820723010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820723006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.16918826}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.299171}
+  m_EdgeRadius: 0
 --- !u!1 &841851037
 GameObject:
   m_ObjectHideFlags: 0
@@ -8207,7 +8330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865263948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.84889, y: -3.1599998, z: 4.8298025}
+  m_LocalPosition: {x: -98.86889, y: -3.1399999, z: 4.8298025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980157337}
@@ -8250,7 +8373,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 914676673}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.9
@@ -9625,6 +9748,8 @@ MonoBehaviour:
   timetravelPiece: 1
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1055112713
@@ -12181,6 +12306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopper: {fileID: 1269855224}
+  iskey: 0
 --- !u!114 &1269855229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12207,6 +12333,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1270247068 stripped
@@ -12554,6 +12682,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &1283004817
@@ -13450,6 +13580,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1384554037
@@ -14943,7 +15075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfSpeaker: {fileID: 14053946}
   textDisplay: {fileID: 1042512699}
-  dialogue: {fileID: 11400000, guid: 8cd6fef9eb942504a9273008138fb2c6, type: 2}
+  dialogue: {fileID: 11400000, guid: 122febb839399b546b5740ec7fc32fe0, type: 2}
   dialogueBox: {fileID: 1270247068}
   continueButton: {fileID: 302516687}
   interactionSystem: {fileID: 0}
@@ -14955,6 +15087,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &1613103810
@@ -14969,7 +15103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886eb496136982d4da46da01f49a5ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopper: {fileID: 1613103807}
+  stopper: {fileID: 1269855224}
+  iskey: 0
 --- !u!61 &1613103811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17337,6 +17472,8 @@ MonoBehaviour:
   timetravelPiece: 0
   discriminationScene: 0
   newsPaper: 0
+  KeyFind: 0
+  fader: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1912194975
@@ -18384,6 +18521,10 @@ PrefabInstance:
     - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
       propertyPath: m_SortingLayerID
@@ -19474,6 +19615,10 @@ PrefabInstance:
     - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -1620356440228181150, guid: b48c66b878156934d828911220743de8, type: 3}
       propertyPath: m_SortingLayerID

@@ -7,6 +7,10 @@ public class PastFuture : MonoBehaviour
     public GameObject past;
     public GameObject future;
     public static bool change;
+    private void Start()
+    {
+        //change = true;
+    }
     private void Update()
     {
         if (change)

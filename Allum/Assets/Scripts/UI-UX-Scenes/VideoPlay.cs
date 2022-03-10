@@ -18,7 +18,7 @@ public class VideoPlay : MonoBehaviour
             {
                 Debug.Log("Finished");
                 playVid = false;
-                Loader.load(sceneName);
+                SwitchSceneLoader.instance.SwitchScene(sceneName);
             }
         }
         else

@@ -16,7 +16,6 @@ public class TimePiece : MonoBehaviour
         }
         if (SaveManager.instance.FirstMissionComplete)
         {
-            Debug.Log(SaveManager.instance.FirstMissionComplete);
             isPast = true;
             if (ItemDialogueTrigger.dialogueFinished)
             {
@@ -28,6 +27,10 @@ public class TimePiece : MonoBehaviour
                 isPast = false;
                 this.gameObject.SetActive(false);
                 return;
+            }
+            if (PastFuture.change)
+            {
+                this.gameObject.SetActive(false);
             }
         }
         else

@@ -20,13 +20,14 @@ public class PlayerData
    public bool fade;
    public bool walkingAway;
    public bool parentShow, kidShow;
-   public bool changeTime;
+   public bool changeTime, teleport;
    public List<string> NPCNames = new List<string>();
    public PlayerData (Player player)
    {
       Vector3 playerPos = player.transform.position;
       Vector3 scale = player.transform.localScale;
       isfacing = player.isFacingRight;
+      teleport = Player.teleport;
       parentShow = ParentBehavior.showParent;
       kidShow = KidBehavior.showKid;
       changeTime = PastFuture.change;

@@ -228,6 +228,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
+      propertyPath: keyFound
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653426066521733172, guid: 6403041268c36344a81fe858ad725334, type: 3}
       propertyPath: SecondMissionStart
       value: 1
       objectReference: {fileID: 0}
@@ -504,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1961782825636194211, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
       propertyPath: posX
-      value: 7.432118
+      value: -7.07
       objectReference: {fileID: 0}
     - target: {fileID: 1961782825636194211, guid: d3d4d74c464945c46a5dd8bc92708324, type: 3}
       propertyPath: posY
@@ -994,6 +998,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6052439653753126245, guid: 89d60cab06e335e469f59e50bd9aa1af, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: a0d950be47a8a7348bc4866ccc86968a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89d60cab06e335e469f59e50bd9aa1af, type: 3}
 --- !u!224 &408470262 stripped
@@ -2167,6 +2175,9 @@ MonoBehaviour:
   mailStart: 0
   startVid: 0
   afterConsultation: 1
+  combine: 0
+  startVid2: 0
+  LastQuest: 0
   choiceIndex: 0
   index: 10
   typingSpeed: 0.02
@@ -2609,7 +2620,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: index
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: isGoing
@@ -2621,6 +2632,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 52e30b497a5c06e4abe7fdbdb1ea5989, type: 2}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: startVid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: startVid2
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
@@ -2697,7 +2712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4781405067150331613, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: m_Name
-      value: BadjaoKid
+      value: BadjaoKidInsideClassRoom
       objectReference: {fileID: 0}
     - target: {fileID: 4939106229187783065, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: m_RootOrder
@@ -2839,7 +2854,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.13858198
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1115621147, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
 --- !u!1 &2054102689 stripped
 GameObject:

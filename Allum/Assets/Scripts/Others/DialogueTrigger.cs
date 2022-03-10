@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, combine;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, combine, startVid2, LastQuest;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -40,7 +40,6 @@ public class DialogueTrigger : MonoBehaviour
         // }
         if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
-            Debug.Log("lastLines");
             index = dialogue.lines.Length-1;
         }
         if (isInteracting)
@@ -203,6 +202,18 @@ public class DialogueTrigger : MonoBehaviour
                         {
                             WatchMiniGame.instance.combineWatch = true;
                             Player.current.movementDisabled = true;
+                        }
+                        if (startVid2)
+                        {
+                            KidBehavior.showKid = true;
+                            VideoPlay.playVid = true;
+                            SaveManager.instance.SavePlayer();
+                        }
+
+                        if (LastQuest)
+                        {
+                            Player.teleport = true;
+                            SaveManager.instance.SavePlayer();
                         }
                     }
                 }
