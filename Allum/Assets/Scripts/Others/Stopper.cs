@@ -5,7 +5,6 @@ using UnityEngine;
 public class Stopper : MonoBehaviour
 {
     public GameObject stopper;
-
     private void Awake()
     {
         if (stopper == null)
@@ -51,6 +50,16 @@ public class Stopper : MonoBehaviour
             {
                 SaveManager.instance.SavePlayer();
             }
+        }
+        else
+        {
+            stopper.SetActive(true);
+        }
+
+        if (SaveManager.instance.keyFound)
+        {
+            SaveManager.instance.SavePlayer();
+            stopper.SetActive(false);
         }
         else
         {

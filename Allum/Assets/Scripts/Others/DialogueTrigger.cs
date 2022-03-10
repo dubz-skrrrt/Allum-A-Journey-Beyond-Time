@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, combine;
     public static bool walkedAway;
     public int choiceIndex;
     public int index;
@@ -198,6 +198,11 @@ public class DialogueTrigger : MonoBehaviour
                         if (afterConsultation)
                         {
                             StartCoroutine(SceneFader.instance.FadeOutFX());
+                        }
+                        if (combine)
+                        {
+                            WatchMiniGame.instance.combineWatch = true;
+                            Player.current.movementDisabled = true;
                         }
                     }
                 }

@@ -11,7 +11,7 @@ public class ItemDialogueTrigger : MonoBehaviour
     public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
-    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene, newsPaper;
+    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene, newsPaper, KeyFind, fader;
     public int index;
     public float typingSpeed;
     public static bool dialogueFinished, onCollide;
@@ -29,7 +29,7 @@ public class ItemDialogueTrigger : MonoBehaviour
             isInteracting = true;
             onCollide = false;
         }
-        if (isInteracting)
+        if (isInteracting && SaveManager.instance.canWalk)
         {
             player.movementDisabled = true;
             dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
@@ -68,7 +68,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                 {
                     if (index == 3)
                     {
-                        Debug.Log("Checking");
+                        
                         TogglePopUpImage.show = true;
                     }
                     if (continueButton.activeSelf)
@@ -81,7 +81,23 @@ public class ItemDialogueTrigger : MonoBehaviour
                         TogglePopUpImage.show = false;
                     }
                 }
-
+                if (KeyFind)
+                {
+                    if (index == 1)
+                    {
+                        Debug.Log("Checking");
+                        TogglePopUpImage.show = true;
+                    }
+                    if (index == 2)
+                    {
+                        TogglePopUpImage.show = false;
+                    }
+                    if (continueButton.activeSelf)
+                    {
+                        isRespondingDone = true;
+                        isConversing = false;
+                    }
+                }
                 if (continueButton.activeSelf)
                 {
                     
@@ -126,7 +142,15 @@ public class ItemDialogueTrigger : MonoBehaviour
                         {
                             this.gameObject.SetActive(false);
                         }
-
+                        if (KeyFind)
+                        {
+                            SaveManager.instance.keyFound = true;
+                        }
+                        if (fader)
+                        {
+                            StartCoroutine(SceneFader.instance.FadeOutFX());
+                            SceneFader.faded = false;
+                        }
                     }
                 }
             }

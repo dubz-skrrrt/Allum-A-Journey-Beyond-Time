@@ -5,16 +5,17 @@ using UnityEngine;
 public class KidBehavior : MonoBehaviour
 {
     public static bool showKid;
-
+    public GameObject thisKid;
     private void Update()
     {
+        Debug.Log(showKid);
         if (showKid)
         {
-            this.gameObject.SetActive(true);
+            thisKid.SetActive(true);
         }
         else
         {
-            this.gameObject.SetActive(false);
+            thisKid.SetActive(false);
         }
     }
 }

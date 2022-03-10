@@ -15,6 +15,7 @@ public class SaveManager : MonoBehaviour
     public bool start;
     public bool canWalk;
     public bool inMenu;
+    public bool keyFound;
     public bool FirstMissionComplete;
     public bool SecondMissionStart;
     private void Awake()
@@ -113,6 +114,7 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
+        
         PastFuture.change = data.changeTime;
         KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
