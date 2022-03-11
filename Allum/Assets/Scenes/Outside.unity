@@ -639,6 +639,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &80034982
@@ -1451,6 +1452,7 @@ MonoBehaviour:
   isRespondingDone: 0
   textDisplayDone: 0
   isGoing: 0
+  isGoing2: 0
   mailStart: 0
   startVid: 0
   afterConsultation: 0
@@ -2519,6 +2521,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &266991151
@@ -3821,6 +3824,7 @@ MonoBehaviour:
   isRespondingDone: 0
   textDisplayDone: 0
   isGoing: 0
+  isGoing2: 0
   mailStart: 0
   startVid: 0
   afterConsultation: 0
@@ -4746,6 +4750,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &498406827
@@ -6835,6 +6840,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &739329869
@@ -8067,6 +8073,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &820723009
@@ -9750,6 +9757,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1055112713
@@ -12336,6 +12344,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1270247068 stripped
@@ -12685,6 +12694,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &1283004817
@@ -13583,6 +13593,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!1 &1384554037
@@ -14484,6 +14495,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1513323376
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4440940917111175052, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 84185df7f73c8914280c5fe97f3bf11b, type: 3}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.948434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6749504
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6253004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128431668508846418, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
 --- !u!1 &1527768530
 GameObject:
   m_ObjectHideFlags: 0
@@ -15090,6 +15162,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!114 &1613103810
@@ -17475,6 +17548,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0.02
 --- !u!61 &1912194975

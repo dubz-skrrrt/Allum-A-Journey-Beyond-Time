@@ -125,6 +125,7 @@ public class ItemDialogueTrigger : MonoBehaviour
             {
                 if (Input.GetAxis("Submit") == 1)
                 {
+                    SoundManager.PlaySound("btnPress");
                     if (dialogueFinished)
                     {
                         index = 0;
@@ -156,7 +157,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                         }
                         if (ending)
                         {
-                            Loader.load("EndCredits");
+                            SceneFader.instance.FadeToScene("EndCredits");
                         }
                     }
                 }

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool DialogueIsDone;
     public static Animator animator;
     public static bool teleport;
+    public bool IC, OC, IW, OW;
     bool startAnim;
     private void Awake()
     {
@@ -41,6 +42,22 @@ public class Player : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)
             {
                 animator.SetBool("isWalking", true);
+                if (animator.GetBool("isWalking") && IC)
+                {
+                    SoundManager.PlaySound("inside");
+                }
+                else if (animator.GetBool("isWalking") && OC)
+                {
+                    SoundManager.PlaySound("concrete");
+                }
+                else if (animator.GetBool("isWalking") && IW)
+                {
+                    SoundManager.PlaySound("wood");
+                }
+                else if (animator.GetBool("isWalking") && OW)
+                {
+                    SoundManager.PlaySound("inWood");
+                }
                 if (Input.GetKeyDown(KeyCode.D) && !isFacingRight)
                 {
                     Flip();
@@ -52,6 +69,10 @@ public class Player : MonoBehaviour
             }
             else
                 animator.SetBool("isWalking", false);
+                // IC = false;
+                // OC = false;
+                // IW = false;
+                // OW = false;
         }
 
         if (SaveManager.instance.sceneSwitchSave)
@@ -85,5 +106,24 @@ public class Player : MonoBehaviour
             startAnim = true;
         }
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case ("InsideConcrete"):
+                IC = true;
+                break;
+            case ("OutsideConcrete"):
+                OC = true;
+                break;
+            case ("InsideWood"):
+                IW = true;
+                break;
+            case ("OutsideWood"):
+                OW = true;
+                break;
+        }
     }
 }

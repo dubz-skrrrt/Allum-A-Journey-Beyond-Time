@@ -18,6 +18,7 @@ public class MenuButtonController : MonoBehaviour
                 {
                     if (Input.GetAxis("Vertical") < 0)
                     {
+                        SoundManager.PlaySound("menuBtn");
                         if (index < maxIndex)
                             index++;
                         else
@@ -25,6 +26,7 @@ public class MenuButtonController : MonoBehaviour
                     }
                     else if (Input.GetAxis("Vertical") > 0)
                     {
+                        SoundManager.PlaySound("menuBtn");
                         if (index > 0)
                             index--;
                         else   
@@ -46,6 +48,7 @@ public class MenuButtonController : MonoBehaviour
                     {
                         if (Input.GetAxis("Horizontal") > 0)
                         {
+                            SoundManager.PlaySound("menuBtn");
                             if (index < maxIndex)
                                 index++;
                             else
@@ -53,6 +56,7 @@ public class MenuButtonController : MonoBehaviour
                         }
                         else if (Input.GetAxis("Horizontal") < 0)
                         {
+                            SoundManager.PlaySound("menuBtn");
                             if (index > 0)
                                 index--;
                             else   

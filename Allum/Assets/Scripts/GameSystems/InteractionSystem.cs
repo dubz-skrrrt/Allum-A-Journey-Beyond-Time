@@ -37,6 +37,7 @@ public class InteractionSystem : MonoBehaviour
             }
             if (InteractInput())
             {
+                SoundManager.PlaySound("btnPressed");
                 interacting = true;
                 isCreated = true;
                 if (isNPC)

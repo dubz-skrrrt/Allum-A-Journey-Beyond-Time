@@ -213,7 +213,7 @@ public class DialogueTrigger : MonoBehaviour
             {
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    //dialogueFinished = false;
+                    SoundManager.PlaySound("btnPress");
                     Debug.Log("done");
                     if (dialogueFinished)
                     {
@@ -274,6 +274,7 @@ public class DialogueTrigger : MonoBehaviour
                 {
                     if (Input.GetAxis("Horizontal") > 0)
                     {
+                        SoundManager.PlaySound("gameBtn");
                         if (choiceIndex < maxIndex)
                             choiceIndex++;
                         else
@@ -281,6 +282,7 @@ public class DialogueTrigger : MonoBehaviour
                     }
                     else if (Input.GetAxis("Horizontal") < 0)
                     {
+                        SoundManager.PlaySound("gameBtn");
                         if (choiceIndex > 0)
                             choiceIndex--;
                         else   

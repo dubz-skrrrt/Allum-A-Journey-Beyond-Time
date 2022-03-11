@@ -6,6 +6,10 @@ TagManager:
   tags:
   - UICanvas
   - watch
+  - InsideConcrete
+  - OutsideConcrete
+  - InsideWood
+  - OutsideWood
   layers:
   - Default
   - TransparentFX
