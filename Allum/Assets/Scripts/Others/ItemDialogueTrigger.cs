@@ -48,6 +48,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                 {
                     if (index == 2)
                     {
+                        SoundManager.PlaySound("quake");
                         CameraShake.instance.ShakeCamera(3f, 2f);
                         FrameSwitchingSystem.pastTime = true;
                         if (continueButton.activeSelf)

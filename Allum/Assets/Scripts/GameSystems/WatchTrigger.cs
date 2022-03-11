@@ -9,6 +9,8 @@ public class WatchTrigger : MonoBehaviour
     {
         if(other.tag == "watch")
         {
+            SoundManager.audioSrc.volume = 0.5f;
+            SoundManager.PlaySound("quake");
             CameraShake.instance.ShakeCamera(3f, time);
             StartCoroutine(delay());
             

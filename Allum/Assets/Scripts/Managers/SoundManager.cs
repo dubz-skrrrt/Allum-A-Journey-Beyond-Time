@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip bgm, btnClick, choiceBtn, btnPressed, doorOpen, doorClose;
+    public static AudioClip bgm, btnClick, choiceBtn, btnPressed, doorOpen, doorClose, earthquakeSFX;
     public static AudioSource audioSrc;
 
     // void Awake()
@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour
         btnPressed = Resources.Load<AudioClip>("ButtonSound");
         doorClose = Resources.Load<AudioClip>("DoorClose");
         doorOpen = Resources.Load<AudioClip>("DoorOpen");
+        earthquakeSFX = Resources.Load<AudioClip>("Earthquake");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -48,6 +49,9 @@ public class SoundManager : MonoBehaviour
                     break;
                 case "Close":
                     audioSrc.PlayOneShot(doorClose);
+                    break;
+                case "quake":
+                    audioSrc.PlayOneShot(earthquakeSFX);
                     break;
                 // case "new_card":
                 //     audioSrc.PlayOneShot(drawCard);
