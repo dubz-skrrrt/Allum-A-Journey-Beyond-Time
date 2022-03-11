@@ -19,6 +19,13 @@ public class AnimatorFunctions : MonoBehaviour
         
     }
 
+    public void QuitGame()
+    {
+        if (menuButtonController.index == 2 && MenuController.isStartPanel)
+        {
+            Application.Quit();
+        }
+    }
     public void startGame()
     {
         if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat"))

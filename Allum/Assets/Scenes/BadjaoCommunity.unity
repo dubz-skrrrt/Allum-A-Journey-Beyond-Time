@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfSpeaker: {fileID: 452953435}
   textDisplay: {fileID: 452953434}
-  dialogue: {fileID: 11400000, guid: 27d5bf16d7ef9a74aa6b8152af98adc8, type: 2}
+  dialogue: {fileID: 11400000, guid: 66735e7a89c9b404fafb6a8a0f95c405, type: 2}
   dialogueBox: {fileID: 452953436}
   continueButton: {fileID: 452953429}
   interactionSystem: {fileID: 0}
@@ -2873,7 +2873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap Space To Combine
+  m_text: Press Space To Combine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 076722974f092954bb3d581aa85cda64, type: 2}
   m_sharedMaterial: {fileID: 5157193071949089774, guid: 076722974f092954bb3d581aa85cda64, type: 2}

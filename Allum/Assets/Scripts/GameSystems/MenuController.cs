@@ -26,6 +26,7 @@ public class MenuController : MonoBehaviour
         {
             SoundManager.PlaySound("btnPress");
         }
+        
     }
     
     public void OnClickEscape()
