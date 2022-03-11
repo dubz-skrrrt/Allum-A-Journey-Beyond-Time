@@ -65,15 +65,13 @@ public class DialogueTrigger : MonoBehaviour
         
         if (isConversing)
         {
-            //Debug.Log(textDisplay.text);
-            
             if (textDisplay.text == dialogue.lines[index].text && dialogue.lines[index].hasChoices)
             {
                 if (isGoing)
                 {
                     if (index >= dialogue.lines.Length -1)
                     {
-                        Debug.Log("Going");
+                        
                         Vector3 thisScale = transform.localScale;
                         thisScale.x *= -1;
                         transform.localScale = thisScale;
@@ -91,7 +89,7 @@ public class DialogueTrigger : MonoBehaviour
                 {
                     if (index >= dialogue.lines.Length -1)
                     {
-                        Debug.Log("Going");
+                    
                         Vector3 thisScale = transform.localScale;
                         thisScale.x *= -1;
                         transform.localScale = thisScale;
@@ -109,7 +107,7 @@ public class DialogueTrigger : MonoBehaviour
         }
         #region Walking
         if (isGoing && index >= dialogue.lines.Length -1)
-        {Debug.Log("Stillwalking");
+        {
             this.GetComponent<Animator>().SetBool("isWalking", true);
             transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
         }
@@ -140,7 +138,7 @@ public class DialogueTrigger : MonoBehaviour
         #endregion
         #region Walking2
         if (isGoing2 && index >= dialogue.lines.Length -1)
-        {Debug.Log("Stillwalking");
+        {
             this.GetComponent<Animator>().SetBool("isWalking", true);
             transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
         }

@@ -34,7 +34,7 @@ MonoBehaviour:
       choice2: Perlah? No way!
       response2:
         text: 'Yes way! '
-  - characterName: Kid
+  - characterName: Perla
     text: Well mister, how about yours? What's your name?
     hasChoices: 1
     choices:
@@ -54,7 +54,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: Kid
+  - characterName: Perla
     text: Hmm... I can't read. I'll take you to the "Chief", maybe he knows something
       about.
     hasChoices: 1
@@ -65,7 +65,7 @@ MonoBehaviour:
       choice2: Chief? Like a leader?
       response2:
         text: Yeah, you can say that.
-  - characterName: Kid
+  - characterName: Perla
     text: Well, let's go!
     hasChoices: 1
     choices:

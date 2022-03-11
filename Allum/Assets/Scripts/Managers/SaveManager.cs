@@ -47,22 +47,12 @@ public class SaveManager : MonoBehaviour
     {
         if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && !sceneSwitchSave)
         {
-            Debug.Log("LoadedPlayer");
             LoadPlayerMissionData();
             SceneSwitchData();
             LoadPlayer();
             SavePlayer();
             
         }
-        //  if (File.Exists(Application.persistentDataPath +  "/SaveFile_" + SaveSlotData.SlotName + ".dat") && sceneSwitchSave)
-        // {
-        //     Debug.Log("LoadedPlayer");
-        //     LoadPlayerMissionData();
-        //     SceneSwitchData();
-        //     SavePlayer();
-        //     sceneSwitchSave = false;
-        // }
-        
     }
 
     private void Update()
@@ -103,11 +93,8 @@ public class SaveManager : MonoBehaviour
         
         foreach (string NPCname in data.NPCNames)
         {
-            Debug.Log("Loaded" + NPCname);
             if (NPCDIalogueChecker.NPCName == NPCname)
             {
-                Debug.Log(NPCDIalogueChecker.NPCName);
-                Debug.Log("thisDone" + " " + NPCname);
                 NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
                 if (NPCDIalogueChecker.NPCDialogueDone)
                 {
@@ -148,10 +135,8 @@ public class SaveManager : MonoBehaviour
         NPCs = data.NPCNames;
         foreach (string NPCname in data.NPCNames)
         {
-            Debug.Log("Loaded data NPC name: " + NPCname +  " Scene NPC name: " + NPCDIalogueChecker.NPCName);
             if (NPCDIalogueChecker.NPCName == NPCname)
             {
-                Debug.Log("thisDone");
                 NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
                 if (NPCDIalogueChecker.NPCDialogueDone)
                 {

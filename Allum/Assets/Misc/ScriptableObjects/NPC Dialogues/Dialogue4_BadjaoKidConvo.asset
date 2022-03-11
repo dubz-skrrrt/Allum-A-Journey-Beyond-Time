@@ -86,7 +86,7 @@ MonoBehaviour:
         text: (What a weirdo).
   - characterName: Kid
     text: "Oh this? I\u2019m asking for alms. You know, we\u2019re very poor and
-      my father\u2019s fishing is    not enough for us so I have to find other ways
+      my father\u2019s fishing is not enough for us so I have to find other ways
       to sustain our needs."
     hasChoices: 0
     choices:

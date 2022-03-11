@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip bgm, btnClick, choiceBtn, btnPressed, walkConcrete, walkInside, walkWood, walkInsideWood;
+    public static AudioClip bgm, btnClick, choiceBtn, btnPressed;
     public static AudioSource audioSrc;
 
     // void Awake()
@@ -18,10 +18,6 @@ public class SoundManager : MonoBehaviour
         btnClick = Resources.Load<AudioClip>("ButtonNavigate");
         choiceBtn = Resources.Load<AudioClip>("ButtonNavigate1");
         btnPressed = Resources.Load<AudioClip>("ButtonSound");
-        walkConcrete = Resources.Load<AudioClip>("FootstepsConcrete3");
-        walkInside = Resources.Load<AudioClip>("FootstepsTest");
-        walkWood = Resources.Load<AudioClip>("FootstepsWood3");
-        walkInsideWood = Resources.Load<AudioClip>("FootstepsWood1");
         audioSrc = GetComponent<AudioSource>();
         audioSrc.volume = 0.5f;
     }
@@ -45,18 +41,6 @@ public class SoundManager : MonoBehaviour
                     break;
                 case "btnPress":
                     audioSrc.PlayOneShot(btnPressed);
-                    break;
-                case "concrete":
-                    audioSrc.PlayOneShot(walkConcrete);
-                    break;
-                case "inside":
-                    audioSrc.PlayOneShot(walkInside);
-                    break;
-                case "wood":
-                    audioSrc.PlayOneShot(walkWood);
-                    break;
-                case "inWood":
-                    audioSrc.PlayOneShot(walkInsideWood);
                     break;
                 // case "new_card":
                 //     audioSrc.PlayOneShot(drawCard);

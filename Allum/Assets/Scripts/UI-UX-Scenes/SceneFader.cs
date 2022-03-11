@@ -27,11 +27,6 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeOut(Scene));
         
     }
-
-    // public void FadeEffect()
-    // {
-    //     StartCoroutine(FadeOutFX);
-    // }
     public IEnumerator FadeIn ()
     {
         float t = 1f;

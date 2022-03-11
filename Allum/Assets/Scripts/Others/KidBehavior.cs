@@ -8,7 +8,6 @@ public class KidBehavior : MonoBehaviour
     public GameObject thisKid;
     private void Update()
     {
-        Debug.Log(showKid);
         if (showKid)
         {
             thisKid.SetActive(true);

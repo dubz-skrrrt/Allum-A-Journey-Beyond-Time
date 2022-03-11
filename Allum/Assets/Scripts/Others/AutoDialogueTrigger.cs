@@ -13,7 +13,6 @@ public class AutoDialogueTrigger : MonoBehaviour
            
              if (trigger)
             {
-                Debug.Log("istrigger");
                 this.GetComponent<ItemDialogueTrigger>().isInteracting = true;
                 trigger = false;
             }

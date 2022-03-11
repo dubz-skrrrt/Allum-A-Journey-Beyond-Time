@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Kid
   lines:
-  - characterName: Kid
+  - characterName: Perla
     text: 'Here is where the chief of the village lives. '
     hasChoices: 0
     choices:
@@ -24,7 +24,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: Kid
+  - characterName: Perla
     text: You can come in whenever you like.
     hasChoices: 1
     choices:
@@ -34,7 +34,7 @@ MonoBehaviour:
       choice2: Thank you for taking me here.
       response2:
         text: No problem.
-  - characterName: Kid
+  - characterName: Perla
     text: I'll get going now. See you around.
     hasChoices: 0
     choices:

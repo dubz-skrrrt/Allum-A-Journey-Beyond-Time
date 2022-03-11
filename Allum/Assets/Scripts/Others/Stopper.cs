@@ -10,15 +10,6 @@ public class Stopper : MonoBehaviour
     {
         if (stopper == null)
             stopper = null;
-
-        // if (NPCDIalogueChecker.NPCDialogueDone && !SaveManager.instance.FirstMissionComplete)
-        // {
-        //     stopper.SetActive(false);
-        // }
-        // else
-        // {
-        //     stopper.SetActive(true);
-        // }
     }
     
     private void Update()
@@ -27,7 +18,6 @@ public class Stopper : MonoBehaviour
         {
             foreach(var name in SaveManager.instance.data.NPCNames)
             {
-                Debug.Log(name + " is found");
                 if (name == NPCDIalogueChecker.NPCName)
                 {
                     Player.current.DialogueIsDone = true;
@@ -39,10 +29,8 @@ public class Stopper : MonoBehaviour
         {
             this.gameObject.SetActive(true);
         }
-        Debug.Log(NPCDIalogueChecker.NPCDialogueDone);
         if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
-            Debug.Log("Stop1");
             stopper.SetActive(false);
             if (SaveManager.instance.FirstMissionComplete)
             {
@@ -57,13 +45,11 @@ public class Stopper : MonoBehaviour
         {
             if (SaveManager.instance.keyFound && iskey)
             {
-                Debug.Log("Stop");
                 SaveManager.instance.SavePlayer();
                 stopper.SetActive(false);
             }
             else
             {
-                Debug.Log("Stop2");
                 stopper.SetActive(true);
             }
         }
@@ -74,10 +60,7 @@ public class Stopper : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
         {
-            Debug.Log("hitting");
-
             ItemDialogueTrigger.onCollide = true;
-            
         }
     }
 

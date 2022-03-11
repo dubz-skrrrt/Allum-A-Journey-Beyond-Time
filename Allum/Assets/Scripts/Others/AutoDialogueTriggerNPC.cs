@@ -13,7 +13,6 @@ public class AutoDialogueTriggerNPC : MonoBehaviour
            
              if (trigger)
             {
-                Debug.Log("istrigger");
                 this.GetComponent<DialogueTrigger>().isInteracting = true;
                 Player.current.GetComponent<InteractionSystem>().NPCDialogue = this.gameObject;
                 Player.current.GetComponent<InteractionSystem>().interacting = true;

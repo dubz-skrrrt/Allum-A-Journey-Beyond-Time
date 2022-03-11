@@ -24,7 +24,6 @@ public class NPCDIalogueChecker : MonoBehaviour
         {
             NPCDialogueDone = true;
             SaveManager.instance.NPCs.Add(NPCName);
-            Debug.Log("saved to list");
         }
 
         foreach (string NPCnames in SaveManager.instance.NPCs)
@@ -34,7 +33,6 @@ public class NPCDIalogueChecker : MonoBehaviour
                 NPCDialogueDone = true;
                 if (NPCDialogueDone)
                 {
-                    Debug.Log(NPCName + " " + NPCnames);
                     Player.current.DialogueIsDone = true;
                 }
             }

@@ -12,10 +12,8 @@ public class TimePiece : MonoBehaviour
         if (SaveManager.instance.FirstMissionComplete)
         {
             isPast = true;
-            Debug.Log(ItemDialogueTrigger.dialogueFinished + " " + timePieceDialogue);
             if (ItemDialogueTrigger.dialogueFinished && timePieceDialogue)
             {
-                Debug.Log("check1");
                 timepieceAppear = true;
             }
 
@@ -33,13 +31,11 @@ public class TimePiece : MonoBehaviour
         }
         else
         {
-            Debug.Log("check2");
             this.gameObject.SetActive(false);
         }
 
         if (isPast)
         {
-            Debug.Log("check");
             this.gameObject.SetActive(true);
         }
     }

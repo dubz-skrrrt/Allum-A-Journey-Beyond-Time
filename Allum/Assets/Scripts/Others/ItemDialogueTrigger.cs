@@ -85,7 +85,6 @@ public class ItemDialogueTrigger : MonoBehaviour
                 {
                     if (index == 0)
                     {
-                        Debug.Log("Checking");
                         TogglePopUpImage.show = true;
                     }
                     if (index == 2)

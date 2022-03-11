@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public static Animator animator;
     public AudioSource audioSrc;
     public static bool teleport;
-    public bool IC, OC, IW, OW;
     bool startAnim;
     private void Awake()
     {
@@ -39,7 +38,6 @@ public class Player : MonoBehaviour
     {
         if (!movementDisabled && SaveManager.instance.canWalk)
         {
-            Debug.Log(isMoving);
             animator.SetBool("Start", true);
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
