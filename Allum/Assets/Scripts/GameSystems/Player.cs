@@ -45,9 +45,11 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("isWalking", true);
                 isMoving = true;
-               
+                audioSrc.volume = Random.Range(0.75f, 1);
+                audioSrc.pitch = Random.Range(0.8f, 1.1f);
                 if (Input.GetKeyDown(KeyCode.D))
                 {
+                    
                     audioSrc.Play();
                     if (!isFacingRight)
                     { 
@@ -57,6 +59,7 @@ public class Player : MonoBehaviour
                 }
                 else if(Input.GetKeyDown(KeyCode.A))
                 {
+                    
                     audioSrc.Play();
                     if (isFacingRight)
                     {

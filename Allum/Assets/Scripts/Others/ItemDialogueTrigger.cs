@@ -110,6 +110,7 @@ public class ItemDialogueTrigger : MonoBehaviour
         {
             if (Input.GetAxis("Submit") == 1)
             {
+                SoundManager.PlaySound("btnPress");
                 NextDialogue();
                 isRespondingDone = false;
                  if (index >= dialogue.lines.Length)

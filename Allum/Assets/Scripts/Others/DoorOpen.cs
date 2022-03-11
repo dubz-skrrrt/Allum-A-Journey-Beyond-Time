@@ -31,7 +31,8 @@ public class DoorOpen : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 SaveManager.instance.sceneSwitchSave = true;
-                switchSceneLoader.SwitchScene(nameOfScene);
+                StartCoroutine(DelayOpen());
+                
             }
         }
     }
@@ -40,5 +41,12 @@ public class DoorOpen : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(doorPos.position, new Vector3(width, height, 10));
+    }
+
+    IEnumerator DelayOpen()
+    {
+        Player.current.movementDisabled = true;
+        yield return new WaitForSeconds(1f);
+        switchSceneLoader.SwitchScene(nameOfScene);
     }
 }

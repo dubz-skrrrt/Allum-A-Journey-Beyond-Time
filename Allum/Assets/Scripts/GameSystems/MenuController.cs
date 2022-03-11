@@ -19,7 +19,12 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            SoundManager.PlaySound("btnPress");
             this.gameObject.GetComponent<Animation>().Play("ReturnAnim");
+        }
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            SoundManager.PlaySound("btnPress");
         }
     }
     
@@ -30,6 +35,7 @@ public class MenuController : MonoBehaviour
     }
     public void returnMenuAnim()
     {
+        SoundManager.PlaySound("menuBtn");
         this.gameObject.GetComponent<Animation>().Play("MenuTransition2");
         
     }

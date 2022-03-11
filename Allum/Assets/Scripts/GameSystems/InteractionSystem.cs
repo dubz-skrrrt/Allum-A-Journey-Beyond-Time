@@ -50,6 +50,11 @@ public class InteractionSystem : MonoBehaviour
                     NPCDialogue.GetComponent<ItemDialogueTrigger>().isInteracting = true;
                     isItem = false;
                 }
+                if (isDoor)
+                {
+                    SoundManager.PlaySound("Open");
+                    isDoor = false;
+                }
                 
             }
             

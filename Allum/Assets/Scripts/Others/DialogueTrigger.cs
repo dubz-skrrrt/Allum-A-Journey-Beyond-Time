@@ -56,6 +56,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             player.movementDisabled = true;
             dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
+            SoundManager.PlaySound("menuBtn");
             inDialogue = true;
             StartCoroutine(Type());
             isInteracting = false;
@@ -211,10 +212,10 @@ public class DialogueTrigger : MonoBehaviour
             {
                 if (Input.GetAxis("Submit") == 1)
                 {
-                    SoundManager.PlaySound("btnPress");
                     Debug.Log("done");
                     if (dialogueFinished)
                     {
+                        SoundManager.PlaySound("btnPress");
                         inDialogue = false;
                         player.movementDisabled = false;
                         interactionSystem.interacting = false;
@@ -339,17 +340,20 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (choiceIndex == 0)
         {
+            SoundManager.PlaySound("btnPress");
             StartCoroutine(Response1Type());
             isResponding = true;
         }
         else if (choiceIndex == 1)
         {
+            SoundManager.PlaySound("btnPress");
             StartCoroutine(Response2Type());
             isResponding = true;
         }
     }
     public void NextDialogue()
     {
+        SoundManager.PlaySound("btnPress");
         choice1Button.SetActive(false);
         choice2Button.SetActive(false);
         continueButton.SetActive(false);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip bgm, btnClick, choiceBtn, btnPressed;
+    public static AudioClip bgm, btnClick, choiceBtn, btnPressed, doorOpen, doorClose;
     public static AudioSource audioSrc;
 
     // void Awake()
@@ -18,8 +18,9 @@ public class SoundManager : MonoBehaviour
         btnClick = Resources.Load<AudioClip>("ButtonNavigate");
         choiceBtn = Resources.Load<AudioClip>("ButtonNavigate1");
         btnPressed = Resources.Load<AudioClip>("ButtonSound");
+        doorClose = Resources.Load<AudioClip>("DoorClose");
+        doorOpen = Resources.Load<AudioClip>("DoorOpen");
         audioSrc = GetComponent<AudioSource>();
-        audioSrc.volume = 0.5f;
     }
 
     public static void PlaySound(string clip)
@@ -41,6 +42,12 @@ public class SoundManager : MonoBehaviour
                     break;
                 case "btnPress":
                     audioSrc.PlayOneShot(btnPressed);
+                    break;
+                case "Open":
+                    audioSrc.PlayOneShot(doorOpen);
+                    break;
+                case "Close":
+                    audioSrc.PlayOneShot(doorClose);
                     break;
                 // case "new_card":
                 //     audioSrc.PlayOneShot(drawCard);
