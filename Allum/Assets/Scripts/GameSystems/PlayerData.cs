@@ -18,7 +18,7 @@ public class PlayerData
    public bool pastFrames;
    public bool Key, timePieceOn;
    public bool fade;
-   public bool walkingAway;
+   public bool walkingAway, walkingAway2;
    public bool parentShow, kidShow;
    public bool changeTime, teleport;
    public List<string> NPCNames = new List<string>();
@@ -35,6 +35,7 @@ public class PlayerData
       firstMission = SaveManager.instance.FirstMissionComplete;
       secondMisson = SaveManager.instance.SecondMissionStart;
       walkingAway = DialogueTrigger.walkedAway;
+      walkingAway2 = DialogueTrigger.walkedAway2;
       timePieceOn = TimePiece.timepieceAppear;
       pastFrames = FrameSwitchingSystem.pastTime;
       dialogueDone = NPCDIalogueChecker.NPCDialogueDone;

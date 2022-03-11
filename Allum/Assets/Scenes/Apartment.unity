@@ -697,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopper: {fileID: 192338047}
+  iskey: 1
 --- !u!4 &192338051
 Transform:
   m_ObjectHideFlags: 0
@@ -5143,7 +5144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfSpeaker: {fileID: 1469718617}
   textDisplay: {fileID: 1469718616}
-  dialogue: {fileID: 11400000, guid: 78d93a4bfcfb94348915108d9c0648e5, type: 2}
+  dialogue: {fileID: 11400000, guid: 6533987f6863b954da33e6e6142d3b1a, type: 2}
   dialogueBox: {fileID: 1469718615}
   continueButton: {fileID: 1469718614}
   interactionSystem: {fileID: 0}

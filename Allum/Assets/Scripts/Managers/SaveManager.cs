@@ -106,6 +106,7 @@ public class SaveManager : MonoBehaviour
             Debug.Log("Loaded" + NPCname);
             if (NPCDIalogueChecker.NPCName == NPCname)
             {
+                Debug.Log(NPCDIalogueChecker.NPCName);
                 Debug.Log("thisDone" + " " + NPCname);
                 NPCDIalogueChecker.NPCDialogueDone = data.dialogueDone;
                 if (NPCDIalogueChecker.NPCDialogueDone)
@@ -119,6 +120,7 @@ public class SaveManager : MonoBehaviour
         KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
         SceneFader.faded = data.fade;
+        DialogueTrigger.walkedAway2 = data.walkingAway2;
         DialogueTrigger.walkedAway = data.walkingAway;
         TimePiece.timepieceAppear = data.timePieceOn;
         canWalk = data.wakingup;
@@ -161,6 +163,7 @@ public class SaveManager : MonoBehaviour
         PastFuture.change = data.changeTime;
         KidBehavior.showKid = data.kidShow;
         ParentBehavior.showParent = data.parentShow;
+        DialogueTrigger.walkedAway2 = data.walkingAway2;
         DialogueTrigger.walkedAway = data.walkingAway;
         SceneFader.faded = data.fade;
         sceneName = data.SceneName;

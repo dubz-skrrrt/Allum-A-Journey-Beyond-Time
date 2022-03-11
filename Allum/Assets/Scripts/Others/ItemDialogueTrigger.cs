@@ -11,10 +11,10 @@ public class ItemDialogueTrigger : MonoBehaviour
     public GameObject continueButton;
     [SerializeField] InteractionSystem interactionSystem;
     [SerializeField] Player player;
-    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene, newsPaper, KeyFind, fader;
+    public bool isInteracting,  isConversing, isRespondingDone, inDialogue, timetravelPiece, discriminationScene, newsPaper, KeyFind, fader, ending;
     public int index;
     public float typingSpeed;
-    public static bool dialogueFinished, onCollide;
+    public static bool dialogueFinished, onCollide, fadedFX;
     public static ItemDialogueTrigger instance;
     private void Awake()
     {
@@ -83,7 +83,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                 }
                 if (KeyFind)
                 {
-                    if (index == 1)
+                    if (index == 0)
                     {
                         Debug.Log("Checking");
                         TogglePopUpImage.show = true;
@@ -134,9 +134,13 @@ public class ItemDialogueTrigger : MonoBehaviour
                         interactionSystem.isCreated = false;
                         dialogueFinished = true;
                         dialogueBox.GetComponent<Animator>().SetBool("inDialogue", false);
+                        if (timetravelPiece)
+                        {
+                            TimePiece.timePieceDialogue = true;
+                        }
                         if (discriminationScene)
                         {
-                            StartCoroutine(SceneFader.instance.FadeOutFX());
+                            StartCoroutine(SceneFader.instance.FadeOutFXPersist());
                         }
                         if (newsPaper)
                         {
@@ -149,7 +153,10 @@ public class ItemDialogueTrigger : MonoBehaviour
                         if (fader)
                         {
                             StartCoroutine(SceneFader.instance.FadeOutFX());
-                            SceneFader.faded = false;
+                        }
+                        if (ending)
+                        {
+                            Loader.load("EndCredits");
                         }
                     }
                 }
@@ -158,6 +165,10 @@ public class ItemDialogueTrigger : MonoBehaviour
         if (SceneFader.faded && discriminationScene)
         {
             this.gameObject.SetActive(false);
+        }
+        if (fadedFX && fader)
+        {
+            Player.current.movementDisabled = false;
         }
     }
 
