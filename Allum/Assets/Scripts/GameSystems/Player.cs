@@ -8,14 +8,17 @@ public class Player : MonoBehaviour
     public float MovementSpeed = 1;
     public bool isFacingRight = true;
     public bool movementDisabled = false;
+    public bool isMoving;
     public bool DialogueIsDone;
     public static Animator animator;
+    public AudioSource audioSrc;
     public static bool teleport;
     public bool IC, OC, IW, OW;
     bool startAnim;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>();
         current = this;
     }
     private void Start()
@@ -36,43 +39,39 @@ public class Player : MonoBehaviour
     {
         if (!movementDisabled && SaveManager.instance.canWalk)
         {
+            Debug.Log(isMoving);
             animator.SetBool("Start", true);
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
             if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)
             {
                 animator.SetBool("isWalking", true);
-                if (animator.GetBool("isWalking") && IC)
+                isMoving = true;
+               
+                if (Input.GetKeyDown(KeyCode.D))
                 {
-                    SoundManager.PlaySound("inside");
+                    audioSrc.Play();
+                    if (!isFacingRight)
+                    { 
+                        Flip();
+                    }
+                    
                 }
-                else if (animator.GetBool("isWalking") && OC)
+                else if(Input.GetKeyDown(KeyCode.A))
                 {
-                    SoundManager.PlaySound("concrete");
-                }
-                else if (animator.GetBool("isWalking") && IW)
-                {
-                    SoundManager.PlaySound("wood");
-                }
-                else if (animator.GetBool("isWalking") && OW)
-                {
-                    SoundManager.PlaySound("inWood");
-                }
-                if (Input.GetKeyDown(KeyCode.D) && !isFacingRight)
-                {
-                    Flip();
-                }
-                else if(Input.GetKeyDown(KeyCode.A) && isFacingRight)
-                {
-                    Flip();
+                    audioSrc.Play();
+                    if (isFacingRight)
+                    {
+                        Flip();
+                    }
                 }
             }
             else
+            {
                 animator.SetBool("isWalking", false);
-                // IC = false;
-                // OC = false;
-                // IW = false;
-                // OW = false;
+                isMoving = false;
+                audioSrc.Stop();
+            }
         }
 
         if (SaveManager.instance.sceneSwitchSave)
@@ -82,10 +81,12 @@ public class Player : MonoBehaviour
         
         if (ItemDialogueTrigger.onCollide)
         {
+            audioSrc.Stop();
             animator.SetBool("isWalking", false);
         }
         if (movementDisabled)
         {
+            audioSrc.Stop();
             animator.SetBool("isWalking", false);
         }
     }
@@ -106,24 +107,5 @@ public class Player : MonoBehaviour
             startAnim = true;
         }
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        switch (other.gameObject.tag)
-        {
-            case ("InsideConcrete"):
-                IC = true;
-                break;
-            case ("OutsideConcrete"):
-                OC = true;
-                break;
-            case ("InsideWood"):
-                IW = true;
-                break;
-            case ("OutsideWood"):
-                OW = true;
-                break;
-        }
     }
 }

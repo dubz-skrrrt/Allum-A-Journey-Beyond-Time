@@ -8,7 +8,6 @@ public class TogglePopUpImage : MonoBehaviour
     public GameObject thisObject;
     void Update()
     {
-        Debug.Log(show + "is showing");
         if (show)
         {
             thisObject.SetActive(true);

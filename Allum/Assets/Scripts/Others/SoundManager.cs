@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
         choiceBtn = Resources.Load<AudioClip>("ButtonNavigate1");
         btnPressed = Resources.Load<AudioClip>("ButtonSound");
         walkConcrete = Resources.Load<AudioClip>("FootstepsConcrete3");
-        walkInside = Resources.Load<AudioClip>("FootstepsConcrete1");
+        walkInside = Resources.Load<AudioClip>("FootstepsTest");
         walkWood = Resources.Load<AudioClip>("FootstepsWood3");
         walkInsideWood = Resources.Load<AudioClip>("FootstepsWood1");
         audioSrc = GetComponent<AudioSource>();
