@@ -20,8 +20,8 @@ public class DialogueTrigger : MonoBehaviour
     public static DialogueTrigger instance;
     public bool inDialogue;
     public bool isInteracting;
-    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, mailStart, startVid, afterConsultation, combine, startVid2, LastQuest;
-    public static bool walkedAway;
+    public bool dialogueFinished, isConversing, isResponding, isRespondingDone, textDisplayDone, isGoing, isGoing2, mailStart, startVid, afterConsultation, combine, startVid2, LastQuest;
+    public static bool walkedAway, walkedAway2, parentHide;
     public int choiceIndex;
     public int index;
     public float typingSpeed;
@@ -40,7 +40,17 @@ public class DialogueTrigger : MonoBehaviour
         // }
         if (NPCDIalogueChecker.NPCDialogueDone && Player.current.DialogueIsDone)
         {
-            index = dialogue.lines.Length-1;
+            foreach (string NPCnames in SaveManager.instance.NPCs)
+            {
+                if (this.gameObject.name == NPCnames)
+                {
+                    index = dialogue.lines.Length-1;
+                }
+                else
+                {
+                    Player.current.DialogueIsDone = false;
+                }
+            }
         }
         if (isInteracting)
         {
@@ -77,7 +87,7 @@ public class DialogueTrigger : MonoBehaviour
             }
             if (textDisplay.text == dialogue.lines[index].text && !dialogue.lines[index].hasChoices)
             {
-                 if (isGoing)
+                if (isGoing || isGoing2)
                 {
                     if (index >= dialogue.lines.Length -1)
                     {
@@ -97,7 +107,7 @@ public class DialogueTrigger : MonoBehaviour
                 isConversing = false;
             }
         }
-
+        #region Walking
         if (isGoing && index >= dialogue.lines.Length -1)
         {Debug.Log("Stillwalking");
             this.GetComponent<Animator>().SetBool("isWalking", true);
@@ -105,10 +115,9 @@ public class DialogueTrigger : MonoBehaviour
         }
         if (isGoing && this.transform.position.x < -9.5f )
         {
-            
-            transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
             if (dialogueFinished)
-            {
+            { 
+                transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
                 walkedAway = true; 
             }
             
@@ -127,9 +136,39 @@ public class DialogueTrigger : MonoBehaviour
             {
                 SaveManager.instance.SavePlayer();
             }
+        }
+        #endregion
+        #region Walking2
+        if (isGoing2 && index >= dialogue.lines.Length -1)
+        {Debug.Log("Stillwalking");
+            this.GetComponent<Animator>().SetBool("isWalking", true);
+            transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
+        }
+        if (isGoing2 && this.transform.position.x < -9.5f )
+        {
+            if (dialogueFinished)
+            { 
+                transform.position += new Vector3(-0.5f, 0, 0)* Time.deltaTime *3f;
+                walkedAway2 = true; 
+            }
             
+            if (this.gameObject.activeSelf)
+            {
+                SaveManager.instance.SavePlayer();
+            }
+        }else
+        {
             
         }
+        if (isGoing2 && walkedAway2)
+        {
+            this.gameObject.SetActive(false);
+            if (this.gameObject.activeSelf)
+            {
+                SaveManager.instance.SavePlayer();
+            }
+        }
+        #endregion
         if (isResponding)
         {
             if (textDisplay.text == dialogue.lines[index].choices.response1.text)
@@ -192,11 +231,13 @@ public class DialogueTrigger : MonoBehaviour
                         if (startVid)
                         {
                             ParentBehavior.showParent = false;
+                            parentHide = false;
                             VideoPlay.playVid = true;
                         }
                         if (afterConsultation)
                         {
-                            StartCoroutine(SceneFader.instance.FadeOutFX());
+                            StartCoroutine(SceneFader.instance.FadeOutFXPersist());
+
                         }
                         if (combine)
                         {
@@ -220,7 +261,7 @@ public class DialogueTrigger : MonoBehaviour
                 
             }
         }
-        if (SceneFader.faded && afterConsultation)
+        if (parentHide && afterConsultation)
         {
             this.gameObject.SetActive(false);
             KidBehavior.showKid = true;

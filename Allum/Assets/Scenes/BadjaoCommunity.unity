@@ -392,7 +392,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.28907657}
@@ -436,6 +436,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 1
   index: 0
   typingSpeed: 0
 --- !u!114 &82287773
@@ -1011,6 +1012,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0
 --- !u!1 &344540274
@@ -1706,6 +1708,7 @@ MonoBehaviour:
   newsPaper: 0
   KeyFind: 0
   fader: 0
+  ending: 0
   index: 0
   typingSpeed: 0
 --- !u!114 &646242261
@@ -2630,6 +2633,7 @@ MonoBehaviour:
   isRespondingDone: 0
   textDisplayDone: 0
   isGoing: 0
+  isGoing2: 0
   mailStart: 0
   startVid: 0
   afterConsultation: 0
@@ -2637,7 +2641,7 @@ MonoBehaviour:
   startVid2: 0
   LastQuest: 0
   choiceIndex: 0
-  index: 5
+  index: 0
   typingSpeed: 0.02
 --- !u!212 &1305088374
 SpriteRenderer:
@@ -3985,7 +3989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1768461482
 Transform:
   m_ObjectHideFlags: 0
@@ -4332,6 +4336,7 @@ MonoBehaviour:
   isRespondingDone: 0
   textDisplayDone: 0
   isGoing: 0
+  isGoing2: 0
   mailStart: 0
   startVid: 1
   afterConsultation: 0
@@ -4401,12 +4406,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: isGoing
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 26c1f8fcee9bf384bb678f135b0fa1a1, type: 2}
+    - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: isGoing2
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: choice1Text
       value: 

@@ -29,7 +29,6 @@ public class Player : MonoBehaviour
         {
             this.transform.position = new Vector3(33.05f, -2.87f, 0);
             Flip();
-            SaveManager.instance.SavePlayer();
         }
     }
     private void Update()

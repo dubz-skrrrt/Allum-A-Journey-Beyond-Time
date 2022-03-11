@@ -2172,6 +2172,7 @@ MonoBehaviour:
   isRespondingDone: 0
   textDisplayDone: 0
   isGoing: 0
+  isGoing2: 0
   mailStart: 0
   startVid: 0
   afterConsultation: 1
@@ -2179,7 +2180,7 @@ MonoBehaviour:
   startVid2: 0
   LastQuest: 0
   choiceIndex: 0
-  index: 10
+  index: 0
   typingSpeed: 0.02
 --- !u!61 &1735301890
 BoxCollider2D:
@@ -2620,7 +2621,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: index
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1115621145, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: isGoing

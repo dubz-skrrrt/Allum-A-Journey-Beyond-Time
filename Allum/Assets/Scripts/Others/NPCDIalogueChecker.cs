@@ -19,6 +19,7 @@ public class NPCDIalogueChecker : MonoBehaviour
     }
     private void Update()
     {
+        NPCName = this.gameObject.name;
         if (Player.current.DialogueIsDone && !NPCDialogueDone)
         {
             NPCDialogueDone = true;
@@ -33,6 +34,7 @@ public class NPCDIalogueChecker : MonoBehaviour
                 NPCDialogueDone = true;
                 if (NPCDialogueDone)
                 {
+                    Debug.Log(NPCName + " " + NPCnames);
                     Player.current.DialogueIsDone = true;
                 }
             }

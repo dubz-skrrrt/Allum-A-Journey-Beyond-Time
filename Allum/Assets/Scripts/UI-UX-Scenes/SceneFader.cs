@@ -60,7 +60,6 @@ public class SceneFader : MonoBehaviour
 
          Loader.load(_Scene);
     }
-    
     public IEnumerator FadeOutFX ()
     {
         float t = 0f;
@@ -71,7 +70,22 @@ public class SceneFader : MonoBehaviour
              image.color = new Color (0f, 0f ,0f, a);
              yield return 0;
              StartCoroutine(FadeInFX());
+             Player.current.movementDisabled = true;
+            ItemDialogueTrigger.fadedFX = true;
+         }
+    }
+    public IEnumerator FadeOutFXPersist ()
+    {
+        float t = 0f;
+         while (t < 1f)
+         {
+             t += Time.deltaTime * 0.5f;
+             float a = fadeCurve.Evaluate(t);
+             image.color = new Color (0f, 0f ,0f, a);
+             yield return 0;
+             StartCoroutine(FadeInFX());
              faded = true;
+             DialogueTrigger.parentHide = true;
          }
     }
     public IEnumerator FadeInFX ()
