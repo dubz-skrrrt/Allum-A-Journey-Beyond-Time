@@ -3140,7 +3140,11 @@ PrefabInstance:
     - target: {fileID: 4440940917111175052, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c14f39276df1e0d44b5815ec6aea6b36, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723505384944278077, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8312014924022343820, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3189,6 +3193,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9139801987945885138, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139801987945885138, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c14f39276df1e0d44b5815ec6aea6b36, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b04ebd89c25b840be8c8e27c8af57d, type: 3}
 --- !u!1 &1502952978
