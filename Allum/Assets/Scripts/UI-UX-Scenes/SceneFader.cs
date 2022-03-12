@@ -100,6 +100,7 @@ public class SceneFader : MonoBehaviour
 
     public IEnumerator FadeOutFXEnd ()
     {
+        Player.current.movementDisabled = true;
         float t = 0f;
          while (t < 1f)
          {
@@ -107,8 +108,9 @@ public class SceneFader : MonoBehaviour
              float a = fadeCurve.Evaluate(t);
              image.color = new Color (0f, 0f ,0f, a);
              yield return 0;
+            
          }
-
-         SceneManager.LoadScene("EndCredits");
+        SceneManager.LoadScene("EndCredits");
+         
     }
 }

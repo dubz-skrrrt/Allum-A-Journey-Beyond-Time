@@ -159,7 +159,8 @@ public class ItemDialogueTrigger : MonoBehaviour
                         }
                         if (ending)
                         {
-                            SceneFader.instance.FadeOutFXEnd();
+                            Debug.Log("Ending");
+                            StartCoroutine(SceneFader.instance.FadeOutFXEnd());
                         }
                     }
                 }

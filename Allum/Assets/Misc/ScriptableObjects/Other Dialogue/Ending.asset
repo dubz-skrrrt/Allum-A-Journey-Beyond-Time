@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 
   lines:
-  - characterName: 
+  - characterName: Francisco
     text: Whoa! Where did this all come from?
     hasChoices: 0
     choices:
@@ -24,7 +24,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: 
+  - characterName: Francisco
     text: "Is this a new place here in the city? They sure look like a very successful
       community.\r"
     hasChoices: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: 
+  - characterName: Francisco
     text: I wonder what experiences they had to get this far.
     hasChoices: 0
     choices:
