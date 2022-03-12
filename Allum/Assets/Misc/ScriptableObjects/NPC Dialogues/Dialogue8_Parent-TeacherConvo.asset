@@ -36,7 +36,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: Parent 1
+  - characterName: Parent 2
     text: "Good day hijo!\r"
     hasChoices: 0
     choices:
@@ -46,7 +46,7 @@ MonoBehaviour:
       choice2: 
       response2:
         text: 
-  - characterName: Parent 1
+  - characterName: Parent 3
     text: Francisco, good day!
     hasChoices: 0
     choices:

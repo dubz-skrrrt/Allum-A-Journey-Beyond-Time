@@ -33,6 +33,7 @@ public class ItemDialogueTrigger : MonoBehaviour
         {
             player.movementDisabled = true;
             dialogueBox.GetComponent<Animator>().SetBool("inDialogue", true);
+            SoundManager.PlaySound("menuBtn");
             inDialogue = true;
             StartCoroutine(Type());
             isInteracting = false;
@@ -158,7 +159,7 @@ public class ItemDialogueTrigger : MonoBehaviour
                         }
                         if (ending)
                         {
-                            SceneFader.instance.FadeToScene("EndCredits");
+                            SceneFader.instance.FadeOutFXEnd();
                         }
                     }
                 }
