@@ -987,6 +987,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 1.9002261
       objectReference: {fileID: 0}
+    - target: {fileID: 2072405429866032330, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2093903960030079561, guid: 25b11f3244f51c74f98d774335377b91, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9775027
