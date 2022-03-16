@@ -16,6 +16,10 @@ public class AnimatorFunctions : MonoBehaviour
         {
             menuController.GetComponent<Animation>().Play("MenuTransition");
         }
+        if (menuButtonController.index == 1 && MenuController.isStartPanel)
+        {
+            menuController.GetComponent<Animation>().Play("MenuTransitionControl");
+        }
         if (menuButtonController.index == 2 && MenuController.isStartPanel)
         {
             Application.Quit();

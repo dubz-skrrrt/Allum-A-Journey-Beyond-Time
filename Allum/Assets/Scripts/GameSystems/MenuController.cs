@@ -5,6 +5,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject MenuPanel;
     [SerializeField] GameObject SlotSelectPanel;
+    [SerializeField] GameObject ControlPanel;
     [SerializeField] MenuButtonController menuButtonController;
     public static bool isStartPanel;
     public static bool isStartPressed;
@@ -52,8 +53,15 @@ public class MenuController : MonoBehaviour
         menuButtonController.index = 0;
         MenuPanel.SetActive(true);
         SlotSelectPanel.SetActive(false);
+        ControlPanel.SetActive(false);
         isReturn = false;
         isStartPanel = true;
     }
 
+    public void ControlsEnabled()
+    {
+        MenuPanel.SetActive(false);
+        ControlPanel.SetActive(true);
+        isStartPanel = false;
+    }
 }

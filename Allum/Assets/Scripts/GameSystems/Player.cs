@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
             SaveManager.instance.LoadPlayerMissionData();
             SaveManager.instance.SceneSwitchData();
         }
+        Debug.Log(this.gameObject.transform.position);
         if (!teleport && PastFuture.change)
         {
             this.transform.position = new Vector3(33.05f, -2.87f, 0);
